@@ -10,7 +10,7 @@ export interface PillGroup {
 }
 
 export interface TastingStep {
-  key: 'appearance' | 'nose' | 'palate' | 'finish'
+  key: 'bottle' | 'appearance' | 'nose' | 'palate' | 'finish'
   title: string
   emoji: string
   blurb: string
@@ -18,6 +18,35 @@ export interface TastingStep {
 }
 
 export const TASTING_STEPS: TastingStep[] = [
+  {
+    key: 'bottle',
+    title: 'The Bottle',
+    emoji: '🍾',
+    blurb: 'Admire the vessel before the pour.',
+    groups: [
+      {
+        key: 'presence',
+        label: 'Shelf Presence',
+        options: ['Wallflower', 'Understated', 'Handsome', 'Striking', 'Showstopper'],
+      },
+      {
+        key: 'style',
+        label: 'Aesthetic',
+        hint: 'Pick any that fit',
+        multi: true,
+        options: [
+          'Timeless Elegance',
+          'Regal & Ornate',
+          'Sleek Minimalism',
+          'Rustic Charm',
+          'Vintage Apothecary',
+          'Bold & Modern',
+          'Whimsical Flourish',
+          'Understated Luxury',
+        ],
+      },
+    ],
+  },
   {
     key: 'appearance',
     title: 'Appearance',

@@ -174,6 +174,7 @@ export class MemoryRepo implements Repo {
     const t = tastings.find((x) => x.id === id && x.memberId === memberId)
     if (!t) return null
     t.score = input.score
+    t.bottle = input.bottle ?? {}
     t.appearance = input.appearance ?? {}
     t.nose = { ...input.nose, aromas: input.nose?.aromas ?? [] }
     t.palate = input.palate ?? {}

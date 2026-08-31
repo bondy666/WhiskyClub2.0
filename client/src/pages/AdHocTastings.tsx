@@ -79,6 +79,10 @@ export function AdHocTastings() {
               </div>
 
               <div className="mt-3 flex flex-wrap gap-1.5">
+                {t.bottle?.presence && <Tag>{t.bottle.presence} bottle</Tag>}
+                {t.bottle?.style?.map((s) => (
+                  <Tag key={s}>{s}</Tag>
+                ))}
                 {t.appearance.colour && (
                   <Tag swatch={COLOUR_SWATCH[t.appearance.colour]}>{t.appearance.colour}</Tag>
                 )}

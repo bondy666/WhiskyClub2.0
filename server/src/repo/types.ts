@@ -40,6 +40,7 @@ export interface Tasting {
   sessionName?: string | null
   score: number
   createdAt: string
+  bottle?: { presence?: string; style?: string[]; notes?: string }
   appearance: { colour?: string; clarity?: string; notes?: string }
   nose: { intensity?: string; aromas: string[]; notes?: string }
   palate: { sweetness?: string; body?: string; notes?: string }

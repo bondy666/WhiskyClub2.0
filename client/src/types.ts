@@ -42,6 +42,11 @@ export interface Tasting {
   sessionName?: string | null
   score: number // 0-10, allows .5
   createdAt: string
+  bottle?: {
+    presence?: string
+    style?: string[]
+    notes?: string
+  }
   appearance: {
     colour?: string
     clarity?: string

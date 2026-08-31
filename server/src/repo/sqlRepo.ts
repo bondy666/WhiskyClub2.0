@@ -43,6 +43,11 @@ export class SqlRepo implements Repo {
     sessionName: (r.SessionName as string) ?? null,
     score: r.OverallScore != null ? Number(r.OverallScore) : Number(r.Score ?? 0),
     createdAt: (r.CreatedAt as Date).toISOString(),
+    bottle: {
+      presence: (r.BottlePresence as string) ?? undefined,
+      style: splitAromas((r.BottleStyle as string) ?? null),
+      notes: (r.BottleNotes as string) ?? undefined,
+    },
     appearance: {
       colour: (r.AppearanceColour as string) ?? undefined,
       clarity: (r.AppearanceClarity as string) ?? undefined,
@@ -314,6 +319,9 @@ export class SqlRepo implements Repo {
       .input('memberId', sql.Int, memberId)
       .input('score', sql.Decimal(4, 1), input.score)
       .input('scoreInt', sql.Int, Math.round(input.score))
+      .input('bp', sql.NVarChar, input.bottle?.presence ?? null)
+      .input('bs', sql.NVarChar, (input.bottle?.style ?? []).join(', ') || null)
+      .input('bn', sql.NVarChar(sql.MAX), input.bottle?.notes ?? null)
       .input('ac', sql.NVarChar, input.appearance?.colour ?? null)
       .input('acl', sql.NVarChar, input.appearance?.clarity ?? null)
       .input('an', sql.NVarChar(sql.MAX), input.appearance?.notes ?? null)
@@ -328,13 +336,14 @@ export class SqlRepo implements Repo {
       .input('on', sql.NVarChar(sql.MAX), input.overallNotes ?? null)
       .query(`INSERT INTO dbo.TastingEntries
         (TastingSessionId, WhiskyId, ClubMemberId, Score, OverallScore,
+         BottlePresence, BottleStyle, BottleNotes,
          AppearanceColour, AppearanceClarity, AppearanceNotes,
          NoseIntensity, NoseAromas, NoseNotes,
          PalateSweetness, PalateBody, PalateNotes,
          FinishLength, FinishNotes, OverallNotes)
         OUTPUT INSERTED.*
         VALUES (@sessionId, @whiskyId, @memberId, @scoreInt, @score,
-         @ac, @acl, @an, @ni, @na, @nn, @ps, @pb, @pn, @fl, @fn, @on)`)
+         @bp, @bs, @bn, @ac, @acl, @an, @ni, @na, @nn, @ps, @pb, @pn, @fl, @fn, @on)`)
     return this.mapTasting(r.recordset[0])
   }
 
@@ -348,6 +357,9 @@ export class SqlRepo implements Repo {
       .input('memberId', sql.Int, memberId)
       .input('score', sql.Decimal(4, 1), input.score)
       .input('scoreInt', sql.Int, Math.round(input.score))
+      .input('bp', sql.NVarChar, input.bottle?.presence ?? null)
+      .input('bs', sql.NVarChar, (input.bottle?.style ?? []).join(', ') || null)
+      .input('bn', sql.NVarChar(sql.MAX), input.bottle?.notes ?? null)
       .input('ac', sql.NVarChar, input.appearance?.colour ?? null)
       .input('acl', sql.NVarChar, input.appearance?.clarity ?? null)
       .input('an', sql.NVarChar(sql.MAX), input.appearance?.notes ?? null)
@@ -362,6 +374,7 @@ export class SqlRepo implements Repo {
       .input('on', sql.NVarChar(sql.MAX), input.overallNotes ?? null)
       .query(`UPDATE dbo.TastingEntries SET
         Score = @scoreInt, OverallScore = @score,
+        BottlePresence = @bp, BottleStyle = @bs, BottleNotes = @bn,
         AppearanceColour = @ac, AppearanceClarity = @acl, AppearanceNotes = @an,
         NoseIntensity = @ni, NoseAromas = @na, NoseNotes = @nn,
         PalateSweetness = @ps, PalateBody = @pb, PalateNotes = @pn,

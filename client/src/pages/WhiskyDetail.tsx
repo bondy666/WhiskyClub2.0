@@ -140,6 +140,10 @@ export function WhiskyDetail() {
               )}
 
               <div className="mt-3 flex flex-wrap gap-1.5">
+                {t.bottle?.presence && <Tag>{t.bottle.presence} bottle</Tag>}
+                {t.bottle?.style?.map((s) => (
+                  <Tag key={s}>{s}</Tag>
+                ))}
                 {t.appearance.colour && (
                   <Tag swatch={COLOUR_SWATCH[t.appearance.colour]}>{t.appearance.colour}</Tag>
                 )}
@@ -154,8 +158,9 @@ export function WhiskyDetail() {
                 {t.finish.length && <Tag>{t.finish.length} finish</Tag>}
               </div>
 
-              {(t.appearance.notes || t.nose.notes || t.palate.notes || t.finish.notes) && (
+              {(t.bottle?.notes || t.appearance.notes || t.nose.notes || t.palate.notes || t.finish.notes) && (
                 <div className="mt-3 flex flex-col gap-1.5">
+                  {t.bottle?.notes && <SectionNote label="Bottle">{t.bottle.notes}</SectionNote>}
                   {t.appearance.notes && <SectionNote label="Appearance">{t.appearance.notes}</SectionNote>}
                   {t.nose.notes && <SectionNote label="Nose">{t.nose.notes}</SectionNote>}
                   {t.palate.notes && <SectionNote label="Palate">{t.palate.notes}</SectionNote>}
