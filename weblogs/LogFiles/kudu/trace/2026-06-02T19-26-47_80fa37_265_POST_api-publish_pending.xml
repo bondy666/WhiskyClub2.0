@@ -1,0 +1,15 @@
+<step title="Incoming Request" date="2026-06-02T19:26:47.532" instance="80fa37" url="/api/publish?async=true&amp;deployer=GITHUB_ONE_DEPLOY&amp;type=zip&amp;message=%7B%22type%22%3A%22deployment%22%2C%22sha%22%3A%223352965262a42502a355b7260590a221c212c9ea%22%2C%22repoName%22%3A%22bondy666%2FWhiskyClub%22%2C%22actor%22%3A%22bondy666%22%2C%22slotName%22%3A%22Production%22%2C%22commitMessage%22%3A%22Add%20update%20session%20route%22%7D" method="POST" type="request" pid="837,1,48" Host="whiskyclub-web-akc8dgc8dtfndugm.scm.ukwest-01.azurewebsites.net" User-Agent="GITHUBACTIONS_DeployWebAppToAzure_a2cb07a660fff7b287d76e494c1f175f23037a00343d2432e95aa09d63cb1d87_v3.0.8" Authorization="Bea..." Content-Type="application/octet-stream" Cookie="ARRAffinity=80fa370e688dca2b88312acd83eb0059bdb22388056f36ce8b5a46f963d6eec6; ARRAffinitySameSite=80fa370e688dca2b88312acd83eb0059bdb22388056f36ce8b5a46f963d6eec6" Transfer-Encoding="chunked" X-ARR-LOG-ID="87b9065f-ada3-4c32-ba85-e643fad8b6e8" CLIENT-IP="20.81.183.81:55305" X-SITE-DEPLOYMENT-ID="whiskyclub-web" WAS-DEFAULT-HOSTNAME="whiskyclub-web-akc8dgc8dtfndugm.scm.ukwest-01.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/publish?async=true&amp;deployer=GITHUB_ONE_DEPLOY&amp;type=zip&amp;message=%7B%22type%22%3A%22deployment%22%2C%22sha%22%3A%223352965262a42502a355b7260590a221c212c9ea%22%2C%22repoName%22%3A%22bondy666%2FWhiskyClub%22%2C%22actor%22%3A%22bondy666%22%2C%22slotName%22%3A%22Production%22%2C%22commitMessage%22%3A%22Add%20update%20session%20route%22%7D" X-Client-IP="20.81.183.81" X-Client-Port="55305" >
+  <step title="OneDeploy" date="2026-06-02T19:26:47.553" >
+    <step title="Starting PushDeployAsync" date="2026-06-02T19:26:47.562" /><!-- duration: 9ms -->
+    <step title="Removing _del_node_modules symlink" date="2026-06-02T19:26:47.628" >
+      <step title="Writing artifact to /tmp/zipdeploy/741d72f3-2915-4ab9-b08b-b145b548b57d.zip" date="2026-06-02T19:26:47.881" >
+        <step title="Writing multipart request body to /tmp/zipdeploy/741d72f3-2915-4ab9-b08b-b145b548b57d.zip" date="2026-06-02T19:26:47.882" /><!-- duration: 8ms -->
+      </step><!-- duration: 602ms -->
+      <step title="Removing previous build artifact&apos;s manifest file" date="2026-06-02T19:26:48.487" >
+        <step title="Start deployment in the background" date="2026-06-02T19:26:48.494" >
+          <step title="Acquiring Deployment Lock" date="2026-06-02T19:26:48.540" /><!-- duration: 3ms -->
+          <step title="Acquired Deployment Lock" date="2026-06-02T19:26:48.559" /><!-- duration: 1ms -->
+        </step><!-- duration: 127ms -->
+      </step><!-- duration: 154ms -->
+      <step title="Outgoing response" date="2026-06-02T19:26:48.644" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 1ms -->
+    </step><!-- duration: 1019ms -->

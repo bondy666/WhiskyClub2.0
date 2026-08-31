@@ -1,0 +1,3 @@
+backslashEntries=0
+sample=server/ | server/dist/ | server/node_modules/
+zipMB=14.36

@@ -1,0 +1,48 @@
+2026-08-07T02:15:19.9434410Z State: Starting, Action: EstablishingSiteNetworks, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-08-07T02:15:27.1154197Z State: Starting, Action: StartingSiteContainers, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-08-07T02:15:27.1155033Z Container start method called.
+2026-08-07T02:15:27.1155485Z State: Starting, Action: PullingImage, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pulling image 10.1.0.6:13209/appsvc/node:22-lts_20260504.4.tuxprod for whiskyclub-web., DetailsLevel: INFO
+2026-08-07T02:15:27.1156185Z Establishing network.
+2026-08-07T02:15:27.1359233Z Pulling image: appsvc/node:22-lts_20260504.4.tuxprod.
+2026-08-07T02:15:27.6875363Z Container is starting.
+2026-08-07T02:15:27.6925107Z State: Starting, Action: MountingVolumes, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Mounting volumes for whiskyclub-web., DetailsLevel: INFO
+2026-08-07T02:15:27.6925964Z Establishing user namespace if not established already.
+2026-08-07T02:15:27.6926688Z Establishing network if not established already.
+2026-08-07T02:15:27.6927257Z Mounting volumes.
+2026-08-07T02:15:27.7156229Z Nested mountpoint 
+2026-08-07T02:15:28.1222449Z Nested mountpoint volatile/logs
+2026-08-07T02:15:28.2268160Z Nested mountpoint 
+2026-08-07T02:15:28.4950601Z Nested mountpoint 
+2026-08-07T02:15:28.4955680Z Nested mountpoint 
+2026-08-07T02:15:28.5045818Z Nested mountpoint 
+2026-08-07T02:15:28.6420949Z Nested mountpoint 
+2026-08-07T02:15:28.6628183Z Nested mountpoint 
+2026-08-07T02:15:30.3376991Z State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Finished pulling container image and mounting volumes for whiskyclub-web. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-07T02:15:30.3378155Z Creating container.
+2026-08-07T02:15:30.3378741Z Creating pipes for streaming container io.
+2026-08-07T02:15:30.3379399Z Creating stdout named pipe at /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stdout_2ccea3d38d0c48feb2cb7f11d7e1e037.
+2026-08-07T02:15:30.3380927Z Successfully created stdout named pipe at: /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stdout_2ccea3d38d0c48feb2cb7f11d7e1e037.
+2026-08-07T02:15:30.3381564Z Opening named pipe /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stdout_2ccea3d38d0c48feb2cb7f11d7e1e037 for reading in non-blocking mode.
+2026-08-07T02:15:30.3382332Z Successfully opened named pipe: /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stdout_2ccea3d38d0c48feb2cb7f11d7e1e037.
+2026-08-07T02:15:30.3382879Z Successfully removed non-blocking flag from /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stdout_2ccea3d38d0c48feb2cb7f11d7e1e037.
+2026-08-07T02:15:30.3926689Z Creating stderr named pipe at /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stderr_4d93e581f7904f178093b6ce24269969.
+2026-08-07T02:15:30.3930361Z Successfully created stderr named pipe at: /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stderr_4d93e581f7904f178093b6ce24269969.
+2026-08-07T02:15:30.4037744Z Opening named pipe /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stderr_4d93e581f7904f178093b6ce24269969 for reading in non-blocking mode.
+2026-08-07T02:15:30.4046219Z Successfully opened named pipe: /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stderr_4d93e581f7904f178093b6ce24269969.
+2026-08-07T02:15:30.4049916Z Successfully removed non-blocking flag from /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stderr_4d93e581f7904f178093b6ce24269969.
+2026-08-07T02:15:30.4051240Z Creating container with image: appsvc/node:22-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:22-lts_20260504.4.tuxprod
+2026-08-07T02:15:33.1884042Z Starting container: 8ef3bd85bc73_whiskyclub-web.
+2026-08-07T02:15:33.7386934Z Starting watchers and probes.
+2026-08-07T02:15:33.7574745Z Starting metrics collection.
+2026-08-07T02:15:33.8154530Z Container is running.
+2026-08-07T02:15:33.8518607Z State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container whiskyclub-web successfully created and is running., DetailsLevel: INFO
+2026-08-07T02:15:35.8688066Z Container start method finished after 8753 ms.
+2026-08-07T02:15:35.8689774Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container whiskyclub-web successfully created and is running., DetailsLevel: INFO
+2026-08-07T02:15:36.0790170Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-07T02:17:23.2208700Z Site startup probe succeeded after 106.999777 seconds.
+2026-08-07T02:17:26.8134870Z State: Starting, Action: WarmUpProbeSucceeded, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site startup probe succeeded after 106.999777 seconds., DetailsLevel: INFO
+2026-08-07T02:17:29.6409405Z State: Starting, Action: StartingAuthContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site startup probe succeeded after 106.999777 seconds., DetailsLevel: INFO
+2026-08-07T02:17:55.4428383Z Site is running with deployment version: defb94a1-8cb7-465e-9dc3-358e35202946
+2026-08-07T02:17:55.4525765Z Site started.
+2026-08-07T02:17:55.4597540Z State: Started, Action: None, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site started at 08/07/2026 02:17:55 (UTC), DetailsLevel: INFO
+2026-08-07T02:17:55.4915639Z Site is running with patch version NODE-22.22.2

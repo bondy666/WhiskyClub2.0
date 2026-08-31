@@ -1,0 +1,122 @@
+========== New Cold Start Attempt (2026-08-08T16:37:46.6689699+00:00) ==========
+2026-08-08T16:37:46.6689699+00:00 ContainerStatus: State: Stopping, Action: UnmountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site container: whiskyclub-web terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-08T16:37:47.5163915+00:00 ContainerStatus: State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site container: whiskyclub-web terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-08-08T16:37:48.3437717+00:00 ContainerStatus: Site: whiskyclub-web will be blocked for 2 minutes till 08/08/2026 16:39:48
+2026-08-08T16:37:48.3447938+00:00 ContainerStatus: State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site: whiskyclub-web will be blocked for 2 minutes till 08/08/2026 16:39:48, DetailsLevel: WARN
+2026-08-08T16:37:48.3459607+00:00 ContainerStatus: State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site stopped at 08/08/2026 16:37:48 (UTC), DetailsLevel: WARN
+2026-08-08T16:37:49.3220886+00:00 ContainerStatus: State: Stopped, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site stopped at 08/08/2026 16:37:48 (UTC), DetailsLevel: WARN
+2026-08-08T16:37:51.0732678+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/08/2026 16:39:48, DetailsLevel: WARN
+2026-08-08T16:37:51.0733208+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-08T16:37:51.4873338+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/08/2026 16:39:48, DetailsLevel: WARN
+2026-08-08T16:37:51.4951059+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-08T16:37:55.9876270+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/08/2026 16:39:48, DetailsLevel: WARN
+2026-08-08T16:37:55.9973103+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-08T16:38:09.1607064+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/08/2026 16:39:48, DetailsLevel: WARN
+2026-08-08T16:38:09.1612875+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-08T16:38:30.0355028+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/08/2026 16:39:48, DetailsLevel: WARN
+2026-08-08T16:38:30.0355584+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-08T16:38:39.1389643+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/08/2026 16:39:48, DetailsLevel: WARN
+2026-08-08T16:38:39.1395339+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-08T16:38:41.5419524+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/08/2026 16:39:48, DetailsLevel: WARN
+2026-08-08T16:38:41.5784356+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-08T16:38:45.1533682+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/08/2026 16:39:48, DetailsLevel: WARN
+2026-08-08T16:38:45.1540031+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-08T16:38:46.4471117+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/08/2026 16:39:48, DetailsLevel: WARN
+2026-08-08T16:38:46.4471513+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-08T16:39:40.1654286+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/08/2026 16:39:48, DetailsLevel: WARN
+2026-08-08T16:39:40.1928213+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-08T16:39:45.1804848+00:00 ContainerStatus: State: Blocked, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/08/2026 16:39:48, DetailsLevel: WARN
+2026-08-08T16:39:45.1808133+00:00 ContainerStatus: Start site prohibitted because the site is being blocked.
+2026-08-08T16:39:48.3129195+00:00 ContainerStatus: Site: whiskyclub-web is unblocked.
+2026-08-08T16:40:20.9090155+00:00 ContainerStatus: State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/08/2026 16:39:48, DetailsLevel: WARN
+2026-08-08T16:40:24.1110802+00:00 ContainerStatus: State: Starting, Action: StartingSiteContainers, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 08/08/2026 16:39:48, DetailsLevel: WARN
+2026-08-08T16:40:24.1111941+00:00 ContainerStatus: Container start method called.
+2026-08-08T16:40:24.1112552+00:00 ContainerStatus: State: Starting, Action: PullingImage, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.6:13209/appsvc/node:22-lts_20260504.4.tuxprod for whiskyclub-web., DetailsLevel: INFO
+2026-08-08T16:40:24.1113414+00:00 ContainerStatus: Establishing network.
+2026-08-08T16:40:24.1114295+00:00 ContainerStatus: Pulling image: appsvc/node:22-lts_20260504.4.tuxprod.
+2026-08-08T16:40:24.8176819+00:00 ContainerStatus: Container is starting.
+2026-08-08T16:40:24.8181092+00:00 ContainerStatus: State: Starting, Action: MountingVolumes, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Mounting volumes for whiskyclub-web., DetailsLevel: INFO
+2026-08-08T16:40:24.8186837+00:00 ContainerStatus: Establishing user namespace if not established already.
+2026-08-08T16:40:24.8188204+00:00 ContainerStatus: Establishing network if not established already.
+2026-08-08T16:40:24.8189691+00:00 ContainerStatus: Mounting volumes.
+2026-08-08T16:40:24.8191075+00:00 ContainerStatus: Nested mountpoint 
+2026-08-08T16:40:24.8780692+00:00 ContainerStatus: Nested mountpoint volatile/logs
+2026-08-08T16:40:24.9164487+00:00 ContainerStatus: Nested mountpoint 
+2026-08-08T16:40:24.9170096+00:00 ContainerStatus: Nested mountpoint 
+2026-08-08T16:40:24.9173488+00:00 ContainerStatus: Nested mountpoint 
+2026-08-08T16:40:24.9365969+00:00 ContainerStatus: Nested mountpoint 
+2026-08-08T16:40:24.9377403+00:00 ContainerStatus: Nested mountpoint 
+2026-08-08T16:40:25.0826976+00:00 ContainerStatus: Nested mountpoint 
+2026-08-08T16:40:26.2957056+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for whiskyclub-web. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-08T16:40:26.2983981+00:00 ContainerStatus: Creating container.
+2026-08-08T16:40:26.3484265+00:00 ContainerStatus: Creating pipes for streaming container io.
+2026-08-08T16:40:26.3488114+00:00 ContainerStatus: Creating stdout named pipe at /podr/container/pipe/3d3ec4d1162c_whiskyclub-web/stdout_3b69d726dd1f4f229e9a54d56d8db9f0.
+2026-08-08T16:40:26.3537129+00:00 ContainerStatus: Successfully created stdout named pipe at: /podr/container/pipe/3d3ec4d1162c_whiskyclub-web/stdout_3b69d726dd1f4f229e9a54d56d8db9f0.
+2026-08-08T16:40:26.3538666+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/3d3ec4d1162c_whiskyclub-web/stdout_3b69d726dd1f4f229e9a54d56d8db9f0 for reading in non-blocking mode.
+2026-08-08T16:40:26.3632265+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/3d3ec4d1162c_whiskyclub-web/stdout_3b69d726dd1f4f229e9a54d56d8db9f0.
+2026-08-08T16:40:26.3633570+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/3d3ec4d1162c_whiskyclub-web/stdout_3b69d726dd1f4f229e9a54d56d8db9f0.
+2026-08-08T16:40:26.4116736+00:00 ContainerStatus: Creating stderr named pipe at /podr/container/pipe/3d3ec4d1162c_whiskyclub-web/stderr_2917e8bd4fe04ae2b2546d9b4582cd2c.
+2026-08-08T16:40:26.4120930+00:00 ContainerStatus: Successfully created stderr named pipe at: /podr/container/pipe/3d3ec4d1162c_whiskyclub-web/stderr_2917e8bd4fe04ae2b2546d9b4582cd2c.
+2026-08-08T16:40:26.4129568+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/3d3ec4d1162c_whiskyclub-web/stderr_2917e8bd4fe04ae2b2546d9b4582cd2c for reading in non-blocking mode.
+2026-08-08T16:40:26.4136789+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/3d3ec4d1162c_whiskyclub-web/stderr_2917e8bd4fe04ae2b2546d9b4582cd2c.
+2026-08-08T16:40:26.4219948+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/3d3ec4d1162c_whiskyclub-web/stderr_2917e8bd4fe04ae2b2546d9b4582cd2c.
+2026-08-08T16:40:26.4247054+00:00 ContainerStatus: Creating container with image: appsvc/node:22-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:22-lts_20260504.4.tuxprod
+2026-08-08T16:40:27.2279468+00:00 ContainerStatus: Starting container: 3d3ec4d1162c_whiskyclub-web.
+2026-08-08T16:40:27.3899043+00:00 ContainerStatus: Starting watchers and probes.
+2026-08-08T16:40:27.4080088+00:00 ContainerStatus: Starting metrics collection.
+2026-08-08T16:40:27.4094844+00:00 ContainerStatus: Container is running.
+2026-08-08T16:40:27.4163207+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Container whiskyclub-web successfully created and is running., DetailsLevel: INFO
+2026-08-08T16:40:27.5670357+00:00 ContainerStatus: Container start method finished after 3426 ms.
+2026-08-08T16:40:27.5735180+00:00 ContainerStatus: State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Container whiskyclub-web successfully created and is running., DetailsLevel: INFO
+2026-08-08T16:40:27.5741133+00:00 ContainerStatus: State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-08T16:40:27.9585622+00:00 ContainerStream:    _____                               
+2026-08-08T16:40:27.9586173+00:00 ContainerStream:   /  _  \ __________ _________   ____  
+2026-08-08T16:40:27.9586206+00:00 ContainerStream:  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-08-08T16:40:27.9586237+00:00 ContainerStream: /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-08-08T16:40:27.9586264+00:00 ContainerStream: \____|__  /_____ \____/ |__|    \___  >
+2026-08-08T16:40:27.9586285+00:00 ContainerStream:         \/      \/                  \/ 
+2026-08-08T16:40:27.9586305+00:00 ContainerStream: A P P   S E R V I C E   O N   L I N U X
+2026-08-08T16:40:27.9586325+00:00 ContainerStream: 
+2026-08-08T16:40:27.9586444+00:00 ContainerStream: Documentation    : http://aka.ms/webapp-linux
+2026-08-08T16:40:27.9586466+00:00 ContainerStream: NodeJS quickstart: https://aka.ms/node-qs
+2026-08-08T16:40:27.9586489+00:00 ContainerStream: NodeJS Version   : v22.22.2
+2026-08-08T16:40:27.9586509+00:00 ContainerStream: Instance Name    : lw0sdlwk000AL4
+2026-08-08T16:40:27.9586533+00:00 ContainerStream: Instance Id      : 3813442cbe21c5220c108b670f2bd0119da32cea98e46cf600e564dcf133ad26
+2026-08-08T16:40:27.9586552+00:00 ContainerStream: 
+2026-08-08T16:40:27.9586573+00:00 ContainerStream: Note: Any data outside '/home' is not persisted
+2026-08-08T16:40:29.6297843+00:00 ContainerStream: Starting OpenBSD Secure Shell server: sshd.
+2026-08-08T16:40:29.6667402+00:00 ContainerStream: WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-08-08T16:40:29.8652163+00:00 ContainerStream: Updating certificates in /etc/ssl/certs...
+2026-08-08T16:40:52.7827253+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2026-08-08T16:40:52.7860898+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2026-08-08T16:40:53.0397594+00:00 ContainerStream: rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2026-08-08T16:40:53.0892842+00:00 ContainerStream: 4 added, 0 removed; done.
+2026-08-08T16:40:53.0905579+00:00 ContainerStream: Running hooks in /etc/ca-certificates/update.d...
+2026-08-08T16:40:53.1178929+00:00 ContainerStream: done.
+2026-08-08T16:40:53.1460726+00:00 ContainerStream: CA certificates copied and updated successfully.
+2026-08-08T16:40:53.3524902+00:00 ContainerStream: Starting periodic command scheduler: cron.
+2026-08-08T16:40:53.5784782+00:00 ContainerStream: Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2026-08-08T16:40:53.5880811+00:00 ContainerStream: Could not find operation ID in manifest. Generating an operation id...
+2026-08-08T16:40:53.5880919+00:00 ContainerStream: Build Operation ID: 406d0413-fb25-480d-9581-f4626195f335
+2026-08-08T16:40:54.1641386+00:00 ContainerStream: Environment Variables for Application Insight's IPA Codeless Configuration exists..
+2026-08-08T16:40:54.1840796+00:00 ContainerStream: Writing output script to '/opt/startup/startup.sh'
+2026-08-08T16:40:54.2449440+00:00 ContainerStream: Running #!/bin/sh
+2026-08-08T16:40:54.2449942+00:00 ContainerStream: 
+2026-08-08T16:40:54.2449980+00:00 ContainerStream: # Enter the source directory to make sure the script runs where the user expects
+2026-08-08T16:40:54.2449999+00:00 ContainerStream: cd "/home/site/wwwroot"
+2026-08-08T16:40:54.2450014+00:00 ContainerStream: 
+2026-08-08T16:40:54.2450145+00:00 ContainerStream: export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
+2026-08-08T16:40:54.2450176+00:00 ContainerStream: if [ -z "$PORT" ]; then
+2026-08-08T16:40:54.2450200+00:00 ContainerStream: 		export PORT=8080
+2026-08-08T16:40:54.2450217+00:00 ContainerStream: fi
+2026-08-08T16:40:54.2450232+00:00 ContainerStream: 
+2026-08-08T16:40:54.2631186+00:00 ContainerStream: PATH="$PATH:/home/site/wwwroot" node server/dist/index.js
+2026-08-08T16:41:08.9201310+00:00 ContainerStream: ✅ Connected to Azure SQL (whiskyclubdb)
+2026-08-08T16:41:08.9894964+00:00 ContainerStream: 🥃 Whisky Guild API on http://localhost:8080
+2026-08-08T16:41:09.8569678+00:00 ContainerStatus: Site startup probe succeeded after 42.2337712 seconds.
+2026-08-08T16:41:10.5345025+00:00 ContainerStatus: State: Starting, Action: WarmUpProbeSucceeded, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site startup probe succeeded after 42.2337712 seconds., DetailsLevel: INFO
+2026-08-08T16:41:12.3273320+00:00 ContainerStatus: State: Starting, Action: StartingAuthContainer, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site startup probe succeeded after 42.2337712 seconds., DetailsLevel: INFO
+2026-08-08T16:41:26.8087578+00:00 ContainerStatus: Site is running with deployment version: 6e7b207c-32a9-4f28-b83d-4df62f8d2a87
+2026-08-08T16:41:26.8591967+00:00 ContainerStatus: Site started.
+2026-08-08T16:41:26.8758116+00:00 ContainerStatus: State: Started, Action: None, LastError: ContainerStartupFailure, LastErrorTimestamp: 08/08/2026 16:37:46, LastErrorDetails: Container exited with exit code 1 during startup after 55.2s. Please inspect your container logs for more details., Details: Site started at 08/08/2026 16:41:26 (UTC), DetailsLevel: INFO
+2026-08-08T16:41:27.0056228+00:00 ContainerStatus: Site is running with patch version NODE-22.22.2

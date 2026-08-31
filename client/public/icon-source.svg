@@ -1,0 +1,29 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#211812"/>
+      <stop offset="1" stop-color="#0c0a09"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.7" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#d9922b" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#d9922b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="whisky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4cd7a"/>
+      <stop offset="1" stop-color="#b4652e"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6efe3" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#93826b" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="112" fill="url(#glow)"/>
+  <g transform="translate(256 262) scale(6.4) translate(-24 -26)">
+    <path d="M13 12 L35 12 L33 38 Q32.6 41 29.5 41 L18.5 41 Q15.4 41 15 38 Z"
+      stroke="url(#edge)" stroke-width="2" fill="rgba(246,239,227,0.05)"/>
+    <path d="M15.8 27 L32.2 27 L33 38 Q32.6 41 29.5 41 L18.5 41 Q15.4 41 15 38 Z" fill="url(#whisky)"/>
+    <ellipse cx="24" cy="27" rx="8.2" ry="1.6" fill="#ffe9b8" opacity="0.75"/>
+    <rect x="20.5" y="30" width="7" height="7" rx="1.4" fill="#fff6df" opacity="0.35" transform="rotate(8 24 33)"/>
+  </g>
+</svg>

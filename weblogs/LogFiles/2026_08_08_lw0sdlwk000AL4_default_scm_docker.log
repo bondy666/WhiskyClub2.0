@@ -1,0 +1,303 @@
+2026-08-08T16:17:36.0740352Z     __ __          __      __    _ __     
+2026-08-08T16:17:36.0753190Z    / //_/_  _ ____/ /_  __/ /   (_) /____ 
+2026-08-08T16:17:36.0753289Z   / ,< / / / / __  / / / / /   / / __/ _  
+2026-08-08T16:17:36.0756038Z  / /| / /_/ / /_/ / /_/ / /___/ / /_/  __/
+2026-08-08T16:17:36.0756151Z /_/ |_\__,_/\__,_/\__,_/_____/_/\__/\___/ 
+2026-08-08T16:17:36.0756176Z 
+2026-08-08T16:17:36.0756227Z                                           
+2026-08-08T16:17:36.0756256Z DEBUG CONSOLE | AZURE APP SERVICE ON LINUX
+2026-08-08T16:17:36.0756316Z 
+2026-08-08T16:17:36.0756341Z Documentation: http://aka.ms/webapp-linux
+2026-08-08T16:17:36.0756373Z Kudu Version : 20260630.3
+2026-08-08T16:17:36.0756401Z Commit       : c131cde5a9ad845d93a044a1f5b414d69efca8ad
+2026-08-08T16:17:36.0756449Z Instance Name: lw0sdlwk000AL4
+2026-08-08T16:17:36.0756483Z Instance Id  : 3813442cbe21c5220c108b670f2bd0119da32cea98e46cf600e564dcf133ad26
+2026-08-08T16:17:36.0756508Z 
+2026-08-08T16:17:36.6260804Z chown: changing ownership of '/temp': Operation not permitted
+2026-08-08T16:17:36.6549497Z chmod: changing permissions of '/temp': Operation not permitted
+2026-08-08T16:17:42.4097210Z Restarting OpenBSD Secure Shell server: sshd.
+2026-08-08T16:17:42.6974462Z node not running, starting node /opt/webssh/index.js
+2026-08-08T16:17:54.2413751Z Sat Aug 8 16:17:54 UTC 2026 running .net core
+2026-08-08T16:17:56.5608051Z Startup : 04.17.56.523365
+2026-08-08T16:17:56.7724137Z Configure Services : 04.17.56.765497
+2026-08-08T16:17:57.3897448Z Configure : 04.17.57.389377
+2026-08-08T16:17:57.9273357Z Setting Up Routes : 04.17.57.927051
+2026-08-08T16:17:57.9750701Z Exiting Configure : 04.17.57.974700
+2026-08-08T16:17:58.4597835Z Hosting environment: Production
+2026-08-08T16:17:58.4676247Z Content root path: /opt/Kudu
+2026-08-08T16:17:58.4684282Z Now listening on: http://0.0.0.0:8181
+2026-08-08T16:17:58.4685257Z Application started. Press Ctrl+C to shut down.
+2026-08-08T16:26:56.7928586Z     __ __          __      __    _ __     
+2026-08-08T16:26:56.9520736Z    / //_/_  _ ____/ /_  __/ /   (_) /____ 
+2026-08-08T16:26:56.9595372Z   / ,< / / / / __  / / / / /   / / __/ _  
+2026-08-08T16:26:56.9595486Z  / /| / /_/ / /_/ / /_/ / /___/ / /_/  __/
+2026-08-08T16:26:56.9595517Z /_/ |_\__,_/\__,_/\__,_/_____/_/\__/\___/ 
+2026-08-08T16:26:56.9595552Z 
+2026-08-08T16:26:56.9595678Z                                           
+2026-08-08T16:26:56.9595702Z DEBUG CONSOLE | AZURE APP SERVICE ON LINUX
+2026-08-08T16:26:56.9595863Z 
+2026-08-08T16:26:56.9595889Z Documentation: http://aka.ms/webapp-linux
+2026-08-08T16:26:56.9595921Z Kudu Version : 20260630.3
+2026-08-08T16:26:56.9595946Z Commit       : c131cde5a9ad845d93a044a1f5b414d69efca8ad
+2026-08-08T16:26:56.9595968Z Instance Name: lw0sdlwk000AL4
+2026-08-08T16:26:56.9596018Z Instance Id  : 3813442cbe21c5220c108b670f2bd0119da32cea98e46cf600e564dcf133ad26
+2026-08-08T16:26:56.9596038Z 
+2026-08-08T16:26:59.3072961Z chown: changing ownership of '/temp': Operation not permitted
+2026-08-08T16:26:59.3756985Z chmod: changing permissions of '/temp': Operation not permitted
+2026-08-08T16:27:20.8224523Z Restarting OpenBSD Secure Shell server: sshd.
+2026-08-08T16:27:23.8535084Z node not running, starting node /opt/webssh/index.js
+2026-08-08T16:28:47.4528084Z Sat Aug 8 16:28:47 UTC 2026 running .net core
+2026-08-08T16:28:54.8758724Z Startup : 04.28.54.779613
+2026-08-08T16:28:55.2008124Z Configure Services : 04.28.55.200546
+2026-08-08T16:28:57.8265466Z Configure : 04.28.57.826232
+2026-08-08T16:29:01.1368747Z Setting Up Routes : 04.29.01.121306
+2026-08-08T16:29:01.7261028Z Exiting Configure : 04.29.01.725509
+2026-08-08T16:29:05.1088557Z Hosting environment: Production
+2026-08-08T16:29:05.1098955Z Content root path: /opt/Kudu
+2026-08-08T16:29:05.1114650Z Now listening on: http://0.0.0.0:8181
+2026-08-08T16:29:05.1122684Z Application started. Press Ctrl+C to shut down.
+2026-08-08T16:29:13.1833509Z Deploy Async
+2026-08-08T16:29:19.0674718Z Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx
+2026-08-08T16:29:19.1579946Z You can report issues at https://github.com/Microsoft/Oryx/issues
+2026-08-08T16:29:19.1761218Z 
+2026-08-08T16:29:19.2266446Z Oryx Version: 0.2.20260513.1+5c94136d0d5c06204a00d688dc7aea902452e52c, Commit: 5c94136d0d5c06204a00d688dc7aea902452e52c, ReleaseTagName: 20260513.1
+2026-08-08T16:29:19.2581642Z 
+2026-08-08T16:29:19.3060117Z Build Operation ID: e5b00dce599eec25
+2026-08-08T16:29:19.3438558Z Repository Commit : c8e6b1ba-1b4d-44ff-823c-f28243c95af4
+2026-08-08T16:29:19.3728832Z OS Type           : bookworm
+2026-08-08T16:29:19.4144107Z Image Type        : githubactions
+2026-08-08T16:29:19.4640502Z 
+2026-08-08T16:29:19.5038295Z Primary SDK Storage URL: https://oryx-cdn.microsoft.io
+2026-08-08T16:29:19.5200724Z Error: Couldn't detect a version for the platform 'nodejs' in the repo.
+2026-08-08T16:29:19.5794779Z Backup SDK Storage URL: 
+2026-08-08T16:29:19.6704923Z ACR SDK Registry URL: (not set)
+2026-08-08T16:29:19.7157248Z SDK provider status:
+2026-08-08T16:29:19.7568793Z   External ACR SDK provider: Enabled
+2026-08-08T16:29:19.8147246Z   External SDK provider: Enabled
+2026-08-08T16:29:19.8642051Z   Direct ACR SDK provider: Disabled
+2026-08-08T16:29:19.9228350Z   Blob SDK provider: Enabled
+2026-08-08T16:29:19.9735917Z External ACR SDK provider is enabled. Only using user-specified platform: nodejs
+2026-08-08T16:29:20.0107912Z Detecting platforms...
+2026-08-08T16:29:20.1370469Z Could not detect any platform in the source directory.
+2026-08-08T16:29:26.3462225Z Exception Message : Deployment failed
+2026-08-08T16:29:26.3566078Z Exception StackTrace :    at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 307
+2026-08-08T16:29:26.3570903Z    at Kudu.Core.Deployment.FetchDeploymentManager.PerformDeployment(DeploymentInfoBase deploymentInfo, IDisposable tempDeployment, ChangeSet tempChangeSet, DeployStatusApiResult updateStatusObj) in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 230
+2026-08-08T16:29:26.3574686Z    at Kudu.Core.Deployment.FetchDeploymentManager.<>c__DisplayClass17_0.<<FetchDeploy>b__0>d.MoveNext() in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 131
+2026-08-08T16:29:26.3575125Z --- End of stack trace from previous location ---
+2026-08-08T16:29:26.3575163Z    at Kudu.Core.Deployment.FetchDeploymentManager.FetchDeploy(DeploymentInfoBase deployInfo, Boolean asyncRequested, Uri requestUri, String targetBranch) in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 124
+2026-08-08T16:29:26.3575191Z    at Kudu.Services.Deployment.PushDeploymentController.PushDeployAsync(ArtifactDeploymentInfo deploymentInfo, Boolean isAsync, HttpContext context, JObject requestJson) in /tmp/KuduLite/Kudu.Services/Deployment/PushDeploymentController.cs:line 804
+2026-08-08T16:29:26.3575220Z    at Kudu.Services.Deployment.PushDeploymentController.OneDeploy(String type, Boolean async, String path, Nullable`1 restart, Nullable`1 clean, Boolean ignoreStack, Boolean trackDeploymentProgress, Boolean trackStatus, Boolean reset) in /tmp/KuduLite/Kudu.Services/Deployment/PushDeploymentController.cs:line 624
+2026-08-08T16:29:26.3575247Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+2026-08-08T16:29:26.3575270Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+2026-08-08T16:29:26.3575294Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-08-08T16:29:26.3575313Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+2026-08-08T16:29:26.3575372Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+2026-08-08T16:29:26.3575397Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-08-08T16:29:26.3575422Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-08-08T16:29:26.3575441Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+2026-08-08T16:29:26.3575460Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+2026-08-08T16:29:26.3575484Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-08-08T16:29:26.3575506Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+2026-08-08T16:29:26.3575536Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+2026-08-08T16:29:26.3575554Z    at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+2026-08-08T16:29:26.3575574Z    at Kudu.Services.Web.Startup.<>c.<<Configure>b__11_7>d.MoveNext() in /tmp/KuduLite/Kudu.Services.Web/Startup.cs:line 437
+2026-08-08T16:29:26.3575589Z --- End of stack trace from previous location ---
+2026-08-08T16:29:26.3575610Z    at Kudu.Services.Web.Tracing.TraceMiddleware.Invoke(HttpContext context) in /tmp/KuduLite/Kudu.Services.Web/Tracing/TraceMiddleware.cs:line 101
+2026-08-08T16:29:26.4086689Z fail: Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware[1]
+2026-08-08T16:29:26.4087061Z       An unhandled exception has occurred while executing the request.
+2026-08-08T16:29:26.4087095Z       ExitCode: 3, Output: Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx
+2026-08-08T16:29:26.4087114Z       You can report issues at https://github.com/Microsoft/Oryx/issues
+2026-08-08T16:29:26.4087128Z       
+2026-08-08T16:29:26.4087150Z       Oryx Version: 0.2.20260513.1+5c94136d0d5c06204a00d688dc7aea902452e52c, Commit: 5c94136d0d5c06204a00d688dc7aea902452e52c, ReleaseTagName: 20260513.1
+2026-08-08T16:29:26.4087164Z       
+2026-08-08T16:29:26.4087181Z       Build Operation ID: e5b00dce599eec25
+2026-08-08T16:29:26.4087197Z       Repository Commit : c8e6b1ba-1b4d-44ff-823c-f28243c95af4
+2026-08-08T16:29:26.4087212Z       OS Type           : bookworm
+2026-08-08T16:29:26.4087228Z       Image Type        : githubactions
+2026-08-08T16:29:26.4087244Z       
+2026-08-08T16:29:26.4087262Z       Primary SDK Storage URL: https://oryx-cdn.microsoft.io
+2026-08-08T16:29:26.4087277Z       Backup SDK Storage URL: 
+2026-08-08T16:29:26.4087293Z       ACR SDK Registry URL: (not set)
+2026-08-08T16:29:26.4087307Z       SDK provider status:
+2026-08-08T16:29:26.4087322Z         External ACR SDK provider: Enabled
+2026-08-08T16:29:26.4087380Z         External SDK provider: Enabled
+2026-08-08T16:29:26.4087397Z         Direct ACR SDK provider: Disabled
+2026-08-08T16:29:26.4087412Z         Blob SDK provider: Enabled
+2026-08-08T16:29:26.4087430Z       External ACR SDK provider is enabled. Only using user-specified platform: nodejs
+2026-08-08T16:29:26.4087444Z       Detecting platforms...
+2026-08-08T16:29:26.4087474Z       Could not detect any platform in the source directory., Error: Error: Couldn't detect a version for the platform 'nodejs' in the repo., Kudu.Core.Infrastructure.CommandLineException: Error: Couldn't detect a version for the platform 'nodejs' in the repo.
+2026-08-08T16:29:26.4087502Z       /bin/bash -c "oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8def56a2fb2f855 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS "
+2026-08-08T16:29:26.4087529Z          at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+2026-08-08T16:29:26.4087553Z          at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+2026-08-08T16:29:26.4087582Z          at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message, ILogger internalLogger) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 145
+2026-08-08T16:29:26.4087606Z          at Kudu.Core.Deployment.Generator.OryxBuilder.RunBuildCommand(IOryxArguments args, DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 295
+2026-08-08T16:29:26.4087629Z          at Kudu.Core.Deployment.Generator.OryxBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 136
+2026-08-08T16:29:26.4087689Z          at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+2026-08-08T16:29:26.4087721Z          at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840
+2026-08-08T16:29:26.4087749Z          at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 266
+2026-08-08T16:29:26.4087770Z          at Kudu.Services.Web.Tracing.TraceMiddleware.Invoke(HttpContext context) in /tmp/KuduLite/Kudu.Services.Web/Tracing/TraceMiddleware.cs:line 107
+2026-08-08T16:29:26.4087806Z          at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+2026-08-08T16:29:26.4088020Z          at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2026-08-08T16:38:02.2595200Z Deploy Async
+2026-08-08T16:38:06.4931533Z Run rsync from: /tmp/zipdeploy/extracted/ to: /home/site/wwwroot/ in 8 parallel threads
+2026-08-08T16:38:06.6983196Z Delete options: clean=False, use manifest=False, directory to ignore=
+2026-08-08T16:38:06.7965567Z Prev manifest = /opt/Kudu/Scripts/firstDeploymentManifest and next /home/site/deployments/6e7b207c-32a9-4f28-b83d-4df62f8d2a87/manifest
+2026-08-08T16:38:06.9262810Z Cleaning up /tmp//filelist.txt and /tmp//splits
+2026-08-08T16:38:06.9641641Z Creating a list of all files at /tmp//filelist.txt
+2026-08-08T16:38:06.9936374Z No directory to exclude.
+2026-08-08T16:38:07.0762894Z Created /tmp//filelist.txt. Total number of files to be synced = 7865.
+2026-08-08T16:38:07.1161756Z Created batches from the list of files. Processing 984 files in each thread
+2026-08-08T16:38:07.1652602Z Running rsync for filelist /tmp//splits/split.aa from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/
+2026-08-08T16:38:07.2224088Z Running rsync for filelist /tmp//splits/split.ab from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/
+2026-08-08T16:38:07.2726348Z Running rsync for filelist /tmp//splits/split.ac from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/
+2026-08-08T16:38:07.3317983Z Running rsync for filelist /tmp//splits/split.ad from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/
+2026-08-08T16:38:07.6004449Z Running rsync for filelist /tmp//splits/split.af from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/
+2026-08-08T16:38:07.8552382Z Running rsync for filelist /tmp//splits/split.ae from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/
+2026-08-08T16:38:07.9715033Z Running rsync for filelist /tmp//splits/split.ah from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/
+2026-08-08T16:38:08.2467186Z Running rsync for filelist /tmp//splits/split.ag from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/
+2026-08-08T16:40:06.4206467Z ...............................................................................................................
+2026-08-08T16:40:06.4259335Z 
+2026-08-08T16:40:06.4658924Z Number of files: 1,121 (reg: 984, dir: 137)
+2026-08-08T16:40:06.5063401Z Number of created files: 1,098 (reg: 984, dir: 114)
+2026-08-08T16:40:06.5330620Z Number of deleted files: 0
+2026-08-08T16:40:06.6025413Z Number of regular files transferred: 984
+2026-08-08T16:40:06.6717875Z Total file size: 13.76M bytes
+2026-08-08T16:40:06.7105851Z Total transferred file size: 13.76M bytes
+2026-08-08T16:40:06.7615838Z Literal data: 13.76M bytes
+2026-08-08T16:40:06.8196257Z Matched data: 0 bytes
+2026-08-08T16:40:06.8669674Z File list size: 0
+2026-08-08T16:40:06.8989890Z File list generation time: 6.743 seconds
+2026-08-08T16:40:06.9584929Z File list transfer time: 0.000 seconds
+2026-08-08T16:40:06.9975100Z Total bytes sent: 2.52M
+2026-08-08T16:40:07.0474466Z Total bytes received: 19.08K
+2026-08-08T16:40:07.1052406Z 
+2026-08-08T16:40:07.1453315Z sent 2.52M bytes  received 19.08K bytes  21.23K bytes/sec
+2026-08-08T16:40:07.2037510Z total size is 13.76M  speedup is 5.42
+2026-08-08T16:40:07.2517831Z Attempt 1: Rsync for filelist /tmp//splits/split.ab completed with exit code 0
+2026-08-08T16:40:07.3199186Z 
+2026-08-08T16:40:07.3677794Z Number of files: 1,120 (reg: 977, dir: 143)
+2026-08-08T16:40:07.4370653Z Number of created files: 1,100 (reg: 968, dir: 132)
+2026-08-08T16:40:07.5261274Z Number of deleted files: 0
+2026-08-08T16:40:07.6317131Z Number of regular files transferred: 977
+2026-08-08T16:40:07.7118998Z Total file size: 4.35M bytes
+2026-08-08T16:40:07.8203804Z Total transferred file size: 4.35M bytes
+2026-08-08T16:40:07.8965803Z Literal data: 4.35M bytes
+2026-08-08T16:40:07.9460504Z Matched data: 0 bytes
+2026-08-08T16:40:08.0186349Z File list size: 0
+2026-08-08T16:40:08.0956030Z File list generation time: 6.043 seconds
+2026-08-08T16:40:08.1473798Z File list transfer time: 0.000 seconds
+2026-08-08T16:40:08.2024597Z Total bytes sent: 836.67K
+2026-08-08T16:40:08.2423934Z Total bytes received: 19.01K
+2026-08-08T16:40:08.3106331Z 
+2026-08-08T16:40:08.3513475Z sent 836.67K bytes  received 19.01K bytes  7.10K bytes/sec
+2026-08-08T16:40:08.3803371Z total size is 4.35M  speedup is 5.09
+2026-08-08T16:40:08.4296941Z Attempt 1: Rsync for filelist /tmp//splits/split.ah completed with exit code 0
+2026-08-08T16:40:08.4857046Z 
+2026-08-08T16:40:08.5252873Z Number of files: 1,059 (reg: 984, dir: 75)
+2026-08-08T16:40:08.5756361Z Number of created files: 1,039 (reg: 984, dir: 55)
+2026-08-08T16:40:08.6210092Z Number of deleted files: 0
+2026-08-08T16:40:08.6812052Z Number of regular files transferred: 984
+2026-08-08T16:40:08.7293833Z Total file size: 4.13M bytes
+2026-08-08T16:40:08.8322686Z Total transferred file size: 4.13M bytes
+2026-08-08T16:40:08.8702453Z Literal data: 4.13M bytes
+2026-08-08T16:40:08.9282361Z Matched data: 0 bytes
+2026-08-08T16:40:08.9769137Z File list size: 0
+2026-08-08T16:40:08.9981862Z File list generation time: 7.093 seconds
+2026-08-08T16:40:09.0460358Z File list transfer time: 0.000 seconds
+2026-08-08T16:40:09.0771667Z Total bytes sent: 436.60K
+2026-08-08T16:40:09.1052233Z Total bytes received: 18.92K
+2026-08-08T16:40:09.1435580Z 
+2026-08-08T16:40:09.1716011Z sent 436.60K bytes  received 18.92K bytes  3.78K bytes/sec
+2026-08-08T16:40:09.1812058Z total size is 4.13M  speedup is 9.07
+2026-08-08T16:40:09.2287338Z Attempt 1: Rsync for filelist /tmp//splits/split.ac completed with exit code 0
+2026-08-08T16:40:09.2380938Z 
+2026-08-08T16:40:09.2754932Z Number of files: 1,184 (reg: 984, dir: 200)
+2026-08-08T16:40:09.3019266Z Number of created files: 1,151 (reg: 984, dir: 167)
+2026-08-08T16:40:09.3512398Z Number of deleted files: 0
+2026-08-08T16:40:09.3814728Z Number of regular files transferred: 984
+2026-08-08T16:40:09.4216882Z Total file size: 6.06M bytes
+2026-08-08T16:40:09.4345791Z Total transferred file size: 6.06M bytes
+2026-08-08T16:40:09.5108475Z Literal data: 6.06M bytes
+2026-08-08T16:40:09.6187123Z Matched data: 0 bytes
+2026-08-08T16:40:09.6695071Z File list size: 0
+2026-08-08T16:40:09.7463218Z File list generation time: 5.626 seconds
+2026-08-08T16:40:09.7856211Z File list transfer time: 0.000 seconds
+2026-08-08T16:40:09.8451782Z Total bytes sent: 1.52M
+2026-08-08T16:40:09.9040490Z Total bytes received: 19.24K
+2026-08-08T16:40:09.9524441Z 
+2026-08-08T16:40:09.9730776Z sent 1.52M bytes  received 19.24K bytes  12.76K bytes/sec
+2026-08-08T16:40:09.9913464Z total size is 6.06M  speedup is 3.94
+2026-08-08T16:40:10.0210005Z Attempt 1: Rsync for filelist /tmp//splits/split.aa completed with exit code 0
+2026-08-08T16:40:10.0417703Z 
+2026-08-08T16:40:10.0716478Z Number of files: 1,169 (reg: 984, dir: 185)
+2026-08-08T16:40:10.0998391Z Number of created files: 1,141 (reg: 984, dir: 157)
+2026-08-08T16:40:10.1205386Z Number of deleted files: 0
+2026-08-08T16:40:10.1505847Z Number of regular files transferred: 984
+2026-08-08T16:40:10.1733296Z Total file size: 11.73M bytes
+2026-08-08T16:40:10.2031144Z Total transferred file size: 11.73M bytes
+2026-08-08T16:40:10.2424559Z Literal data: 11.73M bytes
+2026-08-08T16:40:10.2672975Z Matched data: 0 bytes
+2026-08-08T16:40:10.2866297Z File list size: 0
+2026-08-08T16:40:10.3147610Z File list generation time: 7.789 seconds
+2026-08-08T16:40:10.3536390Z File list transfer time: 0.000 seconds
+2026-08-08T16:40:10.4098205Z Total bytes sent: 1.83M
+2026-08-08T16:40:10.4415697Z Total bytes received: 19.24K
+2026-08-08T16:40:10.5080799Z 
+2026-08-08T16:40:10.5627530Z sent 1.83M bytes  received 19.24K bytes  15.24K bytes/sec
+2026-08-08T16:40:10.6235464Z total size is 11.73M  speedup is 6.33
+2026-08-08T16:40:10.6626981Z Attempt 1: Rsync for filelist /tmp//splits/split.ag completed with exit code 0
+2026-08-08T16:40:10.6907323Z 
+2026-08-08T16:40:10.7291032Z Number of files: 1,089 (reg: 984, dir: 105)
+2026-08-08T16:40:10.7477308Z Number of created files: 1,062 (reg: 984, dir: 78)
+2026-08-08T16:40:10.7788955Z Number of deleted files: 0
+2026-08-08T16:40:10.7957111Z Number of regular files transferred: 984
+2026-08-08T16:40:10.8163968Z Total file size: 4.48M bytes
+2026-08-08T16:40:10.8639037Z Total transferred file size: 4.48M bytes
+2026-08-08T16:40:10.8845653Z Literal data: 4.48M bytes
+2026-08-08T16:40:10.9118374Z Matched data: 0 bytes
+2026-08-08T16:40:10.9425821Z File list size: 0
+2026-08-08T16:40:10.9786287Z File list generation time: 7.183 seconds
+2026-08-08T16:40:11.0008083Z File list transfer time: 0.000 seconds
+2026-08-08T16:40:11.0200446Z Total bytes sent: 675.76K
+2026-08-08T16:40:11.0419505Z Total bytes received: 18.99K
+2026-08-08T16:40:11.0612097Z 
+2026-08-08T16:40:11.0803439Z sent 675.76K bytes  received 18.99K bytes  5.67K bytes/sec
+2026-08-08T16:40:11.0891915Z total size is 4.48M  speedup is 6.45
+2026-08-08T16:40:11.1194840Z Attempt 1: Rsync for filelist /tmp//splits/split.ae completed with exit code 0
+2026-08-08T16:40:11.1395921Z 
+2026-08-08T16:40:11.1601176Z Number of files: 1,038 (reg: 984, dir: 54)
+2026-08-08T16:40:11.1685726Z Number of created files: 1,022 (reg: 984, dir: 38)
+2026-08-08T16:40:11.1818221Z Number of deleted files: 0
+2026-08-08T16:40:11.2082586Z Number of regular files transferred: 984
+2026-08-08T16:40:11.2400908Z Total file size: 2.69M bytes
+2026-08-08T16:40:11.2575080Z Total transferred file size: 2.69M bytes
+2026-08-08T16:40:11.2772131Z Literal data: 2.69M bytes
+2026-08-08T16:40:11.2917203Z Matched data: 0 bytes
+2026-08-08T16:40:11.3159048Z File list size: 0
+2026-08-08T16:40:11.3351630Z File list generation time: 7.170 seconds
+2026-08-08T16:40:11.3555116Z File list transfer time: 0.000 seconds
+2026-08-08T16:40:11.3759381Z Total bytes sent: 315.98K
+2026-08-08T16:40:11.3963343Z Total bytes received: 18.87K
+2026-08-08T16:40:11.4303962Z 
+2026-08-08T16:40:11.4368912Z sent 315.98K bytes  received 18.87K bytes  2.73K bytes/sec
+2026-08-08T16:40:11.4453567Z total size is 2.69M  speedup is 8.05
+2026-08-08T16:40:11.4662291Z Attempt 1: Rsync for filelist /tmp//splits/split.ad completed with exit code 0
+2026-08-08T16:40:11.4867113Z 
+2026-08-08T16:40:11.5059186Z Number of files: 1,130 (reg: 984, dir: 146)
+2026-08-08T16:40:11.5162168Z Number of created files: 1,115 (reg: 984, dir: 131)
+2026-08-08T16:40:11.5428413Z Number of deleted files: 0
+2026-08-08T16:40:11.5830299Z Number of regular files transferred: 984
+2026-08-08T16:40:11.6206793Z Total file size: 3.10M bytes
+2026-08-08T16:40:11.6551617Z Total transferred file size: 3.10M bytes
+2026-08-08T16:40:11.6721280Z Literal data: 3.10M bytes
+2026-08-08T16:40:11.6846935Z Matched data: 0 bytes
+2026-08-08T16:40:11.7025996Z File list size: 0
+2026-08-08T16:40:11.7315933Z File list generation time: 7.753 seconds
+2026-08-08T16:40:11.7632771Z File list transfer time: 0.000 seconds
+2026-08-08T16:40:11.8007246Z Total bytes sent: 451.81K
+2026-08-08T16:40:11.8495547Z Total bytes received: 19.14K
+2026-08-08T16:40:11.9189134Z 
+2026-08-08T16:40:11.9415214Z sent 451.81K bytes  received 19.14K bytes  3.81K bytes/sec
+2026-08-08T16:40:11.9900031Z total size is 3.10M  speedup is 6.58
+2026-08-08T16:40:12.0180142Z Attempt 1: Rsync for filelist /tmp//splits/split.af completed with exit code 0
+2026-08-08T16:40:12.0787968Z Completed successfully in 125 seconds

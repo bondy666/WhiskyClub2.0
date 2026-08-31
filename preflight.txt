@@ -1,0 +1,3 @@
+zipMB=13.66
+startup=node server/dist/index.js
+oryx=false

@@ -1,0 +1,119 @@
+========== New Cold Start Attempt (2026-08-07T02:15:19.9434410+00:00) ==========
+2026-08-07T02:15:19.9434410+00:00 ContainerStatus: State: Starting, Action: EstablishingSiteNetworks, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-08-07T02:15:27.1154197+00:00 ContainerStatus: State: Starting, Action: StartingSiteContainers, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-08-07T02:15:27.1155033+00:00 ContainerStatus: Container start method called.
+2026-08-07T02:15:27.1155485+00:00 ContainerStatus: State: Starting, Action: PullingImage, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pulling image 10.1.0.6:13209/appsvc/node:22-lts_20260504.4.tuxprod for whiskyclub-web., DetailsLevel: INFO
+2026-08-07T02:15:27.1156185+00:00 ContainerStatus: Establishing network.
+2026-08-07T02:15:27.1359233+00:00 ContainerStatus: Pulling image: appsvc/node:22-lts_20260504.4.tuxprod.
+2026-08-07T02:15:27.6875363+00:00 ContainerStatus: Container is starting.
+2026-08-07T02:15:27.6925107+00:00 ContainerStatus: State: Starting, Action: MountingVolumes, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Mounting volumes for whiskyclub-web., DetailsLevel: INFO
+2026-08-07T02:15:27.6925964+00:00 ContainerStatus: Establishing user namespace if not established already.
+2026-08-07T02:15:27.6926688+00:00 ContainerStatus: Establishing network if not established already.
+2026-08-07T02:15:27.6927257+00:00 ContainerStatus: Mounting volumes.
+2026-08-07T02:15:27.7156229+00:00 ContainerStatus: Nested mountpoint 
+2026-08-07T02:15:28.1222449+00:00 ContainerStatus: Nested mountpoint volatile/logs
+2026-08-07T02:15:28.2268160+00:00 ContainerStatus: Nested mountpoint 
+2026-08-07T02:15:28.4950601+00:00 ContainerStatus: Nested mountpoint 
+2026-08-07T02:15:28.4955680+00:00 ContainerStatus: Nested mountpoint 
+2026-08-07T02:15:28.5045818+00:00 ContainerStatus: Nested mountpoint 
+2026-08-07T02:15:28.6420949+00:00 ContainerStatus: Nested mountpoint 
+2026-08-07T02:15:28.6628183+00:00 ContainerStatus: Nested mountpoint 
+2026-08-07T02:15:30.3376991+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Finished pulling container image and mounting volumes for whiskyclub-web. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-08-07T02:15:30.3378155+00:00 ContainerStatus: Creating container.
+2026-08-07T02:15:30.3378741+00:00 ContainerStatus: Creating pipes for streaming container io.
+2026-08-07T02:15:30.3379399+00:00 ContainerStatus: Creating stdout named pipe at /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stdout_2ccea3d38d0c48feb2cb7f11d7e1e037.
+2026-08-07T02:15:30.3380927+00:00 ContainerStatus: Successfully created stdout named pipe at: /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stdout_2ccea3d38d0c48feb2cb7f11d7e1e037.
+2026-08-07T02:15:30.3381564+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stdout_2ccea3d38d0c48feb2cb7f11d7e1e037 for reading in non-blocking mode.
+2026-08-07T02:15:30.3382332+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stdout_2ccea3d38d0c48feb2cb7f11d7e1e037.
+2026-08-07T02:15:30.3382879+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stdout_2ccea3d38d0c48feb2cb7f11d7e1e037.
+2026-08-07T02:15:30.3926689+00:00 ContainerStatus: Creating stderr named pipe at /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stderr_4d93e581f7904f178093b6ce24269969.
+2026-08-07T02:15:30.3930361+00:00 ContainerStatus: Successfully created stderr named pipe at: /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stderr_4d93e581f7904f178093b6ce24269969.
+2026-08-07T02:15:30.4037744+00:00 ContainerStatus: Opening named pipe /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stderr_4d93e581f7904f178093b6ce24269969 for reading in non-blocking mode.
+2026-08-07T02:15:30.4046219+00:00 ContainerStatus: Successfully opened named pipe: /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stderr_4d93e581f7904f178093b6ce24269969.
+2026-08-07T02:15:30.4049916+00:00 ContainerStatus: Successfully removed non-blocking flag from /podr/container/pipe/8ef3bd85bc73_whiskyclub-web/stderr_4d93e581f7904f178093b6ce24269969.
+2026-08-07T02:15:30.4051240+00:00 ContainerStatus: Creating container with image: appsvc/node:22-lts_20260504.4.tuxprod from registry: 10.1.0.6:13209 and fully qualified image name: 10.1.0.6:13209/appsvc/node:22-lts_20260504.4.tuxprod
+2026-08-07T02:15:33.1884042+00:00 ContainerStatus: Starting container: 8ef3bd85bc73_whiskyclub-web.
+2026-08-07T02:15:33.7386934+00:00 ContainerStatus: Starting watchers and probes.
+2026-08-07T02:15:33.7574745+00:00 ContainerStatus: Starting metrics collection.
+2026-08-07T02:15:33.8154530+00:00 ContainerStatus: Container is running.
+2026-08-07T02:15:33.8518607+00:00 ContainerStatus: State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container whiskyclub-web successfully created and is running., DetailsLevel: INFO
+2026-08-07T02:15:34.8570895+00:00 ContainerStream:    _____                               
+2026-08-07T02:15:34.8573709+00:00 ContainerStream:   /  _  \ __________ _________   ____  
+2026-08-07T02:15:34.8573802+00:00 ContainerStream:  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-08-07T02:15:34.8573835+00:00 ContainerStream: /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-08-07T02:15:34.8573868+00:00 ContainerStream: \____|__  /_____ \____/ |__|    \___  >
+2026-08-07T02:15:34.8573928+00:00 ContainerStream:         \/      \/                  \/ 
+2026-08-07T02:15:34.8573995+00:00 ContainerStream: A P P   S E R V I C E   O N   L I N U X
+2026-08-07T02:15:34.8574027+00:00 ContainerStream: 
+2026-08-07T02:15:34.8574075+00:00 ContainerStream: Documentation    : http://aka.ms/webapp-linux
+2026-08-07T02:15:34.8574165+00:00 ContainerStream: NodeJS quickstart: https://aka.ms/node-qs
+2026-08-07T02:15:34.8574200+00:00 ContainerStream: NodeJS Version   : v22.22.2
+2026-08-07T02:15:34.8574234+00:00 ContainerStream: Instance Name    : lw0sdlwk000AL4
+2026-08-07T02:15:34.8574279+00:00 ContainerStream: Instance Id      : 3813442cbe21c5220c108b670f2bd0119da32cea98e46cf600e564dcf133ad26
+2026-08-07T02:15:34.8574334+00:00 ContainerStream: 
+2026-08-07T02:15:34.8574370+00:00 ContainerStream: Note: Any data outside '/home' is not persisted
+2026-08-07T02:15:35.8688066+00:00 ContainerStatus: Container start method finished after 8753 ms.
+2026-08-07T02:15:35.8689774+00:00 ContainerStatus: State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container whiskyclub-web successfully created and is running., DetailsLevel: INFO
+2026-08-07T02:15:36.0790170+00:00 ContainerStatus: State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-08-07T02:15:40.7507072+00:00 ContainerStream: Starting OpenBSD Secure Shell server: sshd.
+2026-08-07T02:15:40.7904260+00:00 ContainerStream: WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-08-07T02:15:40.9917138+00:00 ContainerStream: Updating certificates in /etc/ssl/certs...
+2026-08-07T02:16:23.0624248+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2026-08-07T02:16:23.0625130+00:00 ContainerStream: rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2026-08-07T02:16:23.7371276+00:00 ContainerStream: rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2026-08-07T02:16:24.0035969+00:00 ContainerStream: 4 added, 0 removed; done.
+2026-08-07T02:16:24.0939041+00:00 ContainerStream: Running hooks in /etc/ca-certificates/update.d...
+2026-08-07T02:16:24.1397526+00:00 ContainerStream: done.
+2026-08-07T02:16:24.2864434+00:00 ContainerStream: CA certificates copied and updated successfully.
+2026-08-07T02:16:24.8354819+00:00 ContainerStream: Starting periodic command scheduler: cron.
+2026-08-07T02:16:25.3593964+00:00 ContainerStream: Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2026-08-07T02:16:25.3594807+00:00 ContainerStream: Build Operation ID: 8ff4c5be67fc3b33
+2026-08-07T02:16:25.3779441+00:00 ContainerStream: Environment Variables for Application Insight's IPA Codeless Configuration exists..
+2026-08-07T02:16:26.4671413+00:00 ContainerStream: Writing output script to '/opt/startup/startup.sh'
+2026-08-07T02:16:26.6760926+00:00 ContainerStream: Running #!/bin/sh
+2026-08-07T02:16:26.6761479+00:00 ContainerStream: 
+2026-08-07T02:16:26.6761544+00:00 ContainerStream: # Enter the source directory to make sure the script runs where the user expects
+2026-08-07T02:16:26.6761601+00:00 ContainerStream: cd "/home/site/wwwroot"
+2026-08-07T02:16:26.6761629+00:00 ContainerStream: 
+2026-08-07T02:16:26.6761767+00:00 ContainerStream: export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
+2026-08-07T02:16:26.6761847+00:00 ContainerStream: if [ -z "$PORT" ]; then
+2026-08-07T02:16:26.6761877+00:00 ContainerStream: 		export PORT=8080
+2026-08-07T02:16:26.6761906+00:00 ContainerStream: fi
+2026-08-07T02:16:26.6761933+00:00 ContainerStream: 
+2026-08-07T02:16:26.6761964+00:00 ContainerStream: echo Found tar.gz based node_modules.
+2026-08-07T02:16:26.6762199+00:00 ContainerStream: extractionCommand="tar -xzf node_modules.tar.gz -C /node_modules"
+2026-08-07T02:16:26.6762283+00:00 ContainerStream: echo "Removing existing modules directory from root..."
+2026-08-07T02:16:26.6762347+00:00 ContainerStream: rm -fr /node_modules
+2026-08-07T02:16:26.6762379+00:00 ContainerStream: mkdir -p /node_modules
+2026-08-07T02:16:26.6762409+00:00 ContainerStream: echo Extracting modules...
+2026-08-07T02:16:26.6762437+00:00 ContainerStream: $extractionCommand
+2026-08-07T02:16:26.6762769+00:00 ContainerStream: export NODE_PATH="/node_modules":$NODE_PATH
+2026-08-07T02:16:26.6762981+00:00 ContainerStream: export PATH=/node_modules/.bin:$PATH
+2026-08-07T02:16:26.6763017+00:00 ContainerStream: if [ -d node_modules ]; then
+2026-08-07T02:16:26.6763078+00:00 ContainerStream:     mv -f node_modules _del_node_modules || true
+2026-08-07T02:16:26.6763109+00:00 ContainerStream: fi
+2026-08-07T02:16:26.6763138+00:00 ContainerStream: 
+2026-08-07T02:16:26.6763170+00:00 ContainerStream: if [ -d /node_modules ]; then
+2026-08-07T02:16:26.6763201+00:00 ContainerStream:     ln -sfn /node_modules ./node_modules 
+2026-08-07T02:16:26.6763230+00:00 ContainerStream: fi
+2026-08-07T02:16:26.6763257+00:00 ContainerStream: 
+2026-08-07T02:16:26.6763287+00:00 ContainerStream: echo "Done."
+2026-08-07T02:16:26.6763343+00:00 ContainerStream: PATH="$PATH:/home/site/wwwroot" npm start
+2026-08-07T02:16:26.6763376+00:00 ContainerStream: Found tar.gz based node_modules.
+2026-08-07T02:16:26.6920171+00:00 ContainerStream: Removing existing modules directory from root...
+2026-08-07T02:16:26.7314052+00:00 ContainerStream: Extracting modules...
+2026-08-07T02:16:44.8994040+00:00 ContainerStream: Done.
+2026-08-07T02:16:52.3096950+00:00 ContainerStream: npm info using npm@10.9.2
+2026-08-07T02:16:52.3162286+00:00 ContainerStream: npm info using node@v22.22.2
+2026-08-07T02:16:55.9943932+00:00 ContainerStream: 
+2026-08-07T02:16:55.9944729+00:00 ContainerStream: > server@1.0.0 start
+2026-08-07T02:16:55.9944782+00:00 ContainerStream: > node dist/index.js
+2026-08-07T02:16:55.9944814+00:00 ContainerStream: 
+2026-08-07T02:17:19.6260483+00:00 ContainerStream: Whisky Club API running on port 8080
+2026-08-07T02:17:22.9261728+00:00 ContainerStream: Connected to Azure SQL
+2026-08-07T02:17:23.2208700+00:00 ContainerStatus: Site startup probe succeeded after 106.999777 seconds.
+2026-08-07T02:17:24.9427625+00:00 ContainerStream: Synced existing club members into the admin group
+2026-08-07T02:17:25.1899150+00:00 ContainerStream: Ensured activity table exists
+2026-08-07T02:17:25.3733009+00:00 ContainerStream: Ensured tournament tables exist
+2026-08-07T02:17:26.8134870+00:00 ContainerStatus: State: Starting, Action: WarmUpProbeSucceeded, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site startup probe succeeded after 106.999777 seconds., DetailsLevel: INFO
+2026-08-07T02:17:29.6409405+00:00 ContainerStatus: State: Starting, Action: StartingAuthContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site startup probe succeeded after 106.999777 seconds., DetailsLevel: INFO

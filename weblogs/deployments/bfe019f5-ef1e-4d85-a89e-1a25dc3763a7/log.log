@@ -1,0 +1,165 @@
+2026-06-19T12:51:11.1341409Z,Updating submodules.,d3a7e169-3e50-431b-9870-bcb5205e2b0d,0
+2026-06-19T12:51:12.3076650Z,Preparing deployment for commit id 'bfe019f5-e'.,ca2c239f-10f4-421e-8772-f013b25e6c12,0
+2026-06-19T12:51:12.7530423Z,PreDeployment: context.CleanOutputPath False,c88000f2-9c6a-4a15-b836-9d8a550c7080,0
+2026-06-19T12:51:12.8833863Z,PreDeployment: context.OutputPath /home/site/wwwroot,37eddb50-489a-4739-951d-56f666a3a19b,0
+2026-06-19T12:51:13.0126059Z,Repository path is /tmp/zipdeploy/extracted,1f20001d-3a5b-45cc-b8a2-a3feaa7cde3c,0
+2026-06-19T12:51:13.1190028Z,Running oryx build...,c7c83e50-da43-4507-9c24-f5772fe616d3,0
+	2026-06-19T12:51:13.1223421Z,Command: oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8dece01715fac5d -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log,,0
+	2026-06-19T12:51:16.1916955Z,Operation performed by Microsoft Oryx&comma; https://github.com/Microsoft/Oryx,,0
+	2026-06-19T12:51:16.3303888Z,You can report issues at https://github.com/Microsoft/Oryx/issues,,0
+	2026-06-19T12:51:16.3613185Z,,,0
+	2026-06-19T12:51:16.4224947Z,Oryx Version: 0.2.20260513.1+5c94136d0d5c06204a00d688dc7aea902452e52c&comma; Commit: 5c94136d0d5c06204a00d688dc7aea902452e52c&comma; ReleaseTagName: 20260513.1,,0
+	2026-06-19T12:51:16.4630444Z,,,0
+	2026-06-19T12:51:16.5319467Z,Build Operation ID: 08b5b782f073c810,,0
+	2026-06-19T12:51:16.5614139Z,Repository Commit : bfe019f5-ef1e-4d85-a89e-1a25dc3763a7,,0
+	2026-06-19T12:51:16.6032243Z,OS Type           : bookworm,,0
+	2026-06-19T12:51:16.6617705Z,Image Type        : githubactions,,0
+	2026-06-19T12:51:16.7416285Z,,,0
+	2026-06-19T12:51:16.8508290Z,Primary SDK Storage URL: https://oryx-cdn.microsoft.io,,0
+	2026-06-19T12:51:16.8704002Z,Backup SDK Storage URL: ,,0
+	2026-06-19T12:51:16.9213941Z,ACR SDK Registry URL: (not set),,0
+	2026-06-19T12:51:17.0498718Z,SDK provider status:,,0
+	2026-06-19T12:51:17.0815996Z,  External ACR SDK provider: Enabled,,0
+	2026-06-19T12:51:17.1809857Z,  External SDK provider: Enabled,,0
+	2026-06-19T12:51:17.3108990Z,  Direct ACR SDK provider: Disabled,,0
+	2026-06-19T12:51:17.4427603Z,  Blob SDK provider: Enabled,,0
+	2026-06-19T12:51:17.5156950Z,External ACR SDK provider is enabled. Only using user-specified platform: nodejs,,0
+	2026-06-19T12:51:17.5853891Z,Detecting platforms...,,0
+	2026-06-19T12:51:25.6781428Z,External ACR provider resolved version '22.22.2' for nodejs.,,0
+	2026-06-19T12:51:25.7084436Z,Version resolved using external ACR SDK provider.,,0
+	2026-06-19T12:51:25.7670680Z,Detected following platforms:,,0
+	2026-06-19T12:51:25.8047659Z,  nodejs: 22.22.2,,0
+	2026-06-19T12:51:25.8622288Z,Requesting SDK from ACR via external provider: nodejs 22.22.2 (bookworm),,0
+	2026-06-19T12:51:27.3152808Z,Successfully pulled SDK from ACR via external provider: nodejs 22.22.2,,0
+	2026-06-19T12:51:27.3653768Z,SDK for 'nodejs' version '22.22.2' fetched via external ACR provider.,,0
+	2026-06-19T12:51:27.4043222Z,Version '22.22.2' of platform 'nodejs' is not installed. Generating script to install it...,,0
+	2026-06-19T12:51:28.1136924Z,Detected the following frameworks: Typescript&comma;Express,,0
+	2026-06-19T12:51:29.3459441Z,,,0
+	2026-06-19T12:51:29.4370268Z,Using intermediate directory '/tmp/8dece01715fac5d'.,,0
+	2026-06-19T12:51:29.4764720Z,,,0
+	2026-06-19T12:51:29.5191602Z,Copying files to the intermediate directory...,,0
+	2026-06-19T12:52:00.2817452Z,Copying files to intermediate directory done in 31 sec(s).,,0
+	2026-06-19T12:52:00.3898463Z,,,0
+	2026-06-19T12:52:00.4594133Z,Source directory     : /tmp/8dece01715fac5d,,0
+	2026-06-19T12:52:00.4823789Z,Destination directory: /home/site/wwwroot,,0
+	2026-06-19T12:52:00.5308044Z,,,0
+	2026-06-19T12:52:00.5596520Z,Installing platform...,,0
+	2026-06-19T12:52:00.5913915Z,,,0
+	2026-06-19T12:52:00.6303521Z,Downloading and extracting 'nodejs' version '22.22.2' to '/tmp/oryx/platforms/nodejs/22.22.2'...,,0
+	2026-06-19T12:52:00.6511508Z,Detected image debian flavor: bookworm.,,0
+	2026-06-19T12:52:00.6922589Z,SDK binary download was skipped. Looking for cached tarball...,,0
+	2026-06-19T12:52:00.7827217Z,Found tarball at /var/OryxAcrSdks/nodejs/nodejs-bookworm-22.22.2.tar.gz,,0
+	2026-06-19T12:52:28.2291744Z,Successfully extracted nodejs version 22.22.2 from cached tarball.,,0
+	2026-06-19T12:52:28.3682423Z,,,0
+	2026-06-19T12:52:28.5064885Z,Platform installation done in 28 sec(s).,,0
+	2026-06-19T12:52:31.1204361Z,Running build script snippets...,,0
+	2026-06-19T12:52:31.3172863Z,Removing existing manifest file,,0
+	2026-06-19T12:52:31.4277471Z,Creating directory for command manifest file if it does not exist,,0
+	2026-06-19T12:52:31.6351222Z,Creating a manifest file...,,0
+	2026-06-19T12:52:31.7517931Z,Node Build Command Manifest file created.,,0
+	2026-06-19T12:52:31.8229468Z,,,0
+	2026-06-19T12:52:31.8901673Z,Using Node version:,,0
+	2026-06-19T12:52:33.2268234Z,v22.22.2,,0
+	2026-06-19T12:52:33.2678365Z,,,0
+	2026-06-19T12:52:33.3184498Z,Using Npm version:,,0
+	2026-06-19T12:52:36.5860217Z,10.9.7,,0
+	2026-06-19T12:52:36.9387228Z,,,0
+	2026-06-19T12:52:37.1062315Z,Running 'npm install'...,,0
+	2026-06-19T12:52:37.1359838Z,,,0
+	2026-06-19T12:52:55.5652886Z,npm warn deprecated inflight@1.0.6: This module is not supported&comma; and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value&comma; which is much more comprehensive and powerful.,,1
+	2026-06-19T12:52:55.7843703Z,npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported,,1
+	2026-06-19T12:52:56.4748118Z,npm warn deprecated glob@7.2.3: Old versions of glob are not supported&comma; and contain widely publicized security vulnerabilities&comma; which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me,,1
+	2026-06-19T12:53:24.0807768Z,,,0
+	2026-06-19T12:53:24.1231823Z,added 232 packages&comma; and audited 233 packages in 45s,,0
+	2026-06-19T12:53:24.1607457Z,,,0
+	2026-06-19T12:53:24.1914921Z,55 packages are looking for funding,,0
+	2026-06-19T12:53:24.2332319Z,  run `npm fund` for details,,0
+	2026-06-19T12:53:24.2632725Z,,,0
+	2026-06-19T12:53:24.2814994Z,1 high severity vulnerability,,0
+	2026-06-19T12:53:24.3143745Z,,,0
+	2026-06-19T12:53:24.3450914Z,To address all issues&comma; run:,,0
+	2026-06-19T12:53:24.3649085Z,  npm audit fix,,0
+	2026-06-19T12:53:24.3914173Z,,,0
+	2026-06-19T12:53:24.4120461Z,Run `npm audit` for details.,,0
+	2026-06-19T12:53:24.6019819Z,,,0
+	2026-06-19T12:53:24.6058310Z,Running 'npm run build'...,,0
+	2026-06-19T12:53:24.6423971Z,,,0
+	2026-06-19T12:53:25.7145245Z,,,0
+	2026-06-19T12:53:25.7446952Z,> server@1.0.0 build,,0
+	2026-06-19T12:53:25.7752263Z,> npm --prefix client install && npm --prefix client run build && tsc,,0
+	2026-06-19T12:53:25.8065849Z,,,0
+	2026-06-19T12:53:40.0836297Z,npm warn deprecated glob@11.1.0: Old versions of glob are not supported&comma; and contain widely publicized security vulnerabilities&comma; which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me,,1
+	2026-06-19T12:53:44.3742482Z,,,0
+	2026-06-19T12:53:44.3948988Z,added 3 packages&comma; changed 22 packages&comma; and audited 458 packages in 18s,,0
+	2026-06-19T12:53:44.4065333Z,,,0
+	2026-06-19T12:53:44.4552894Z,134 packages are looking for funding,,0
+	2026-06-19T12:53:44.4939144Z,  run `npm fund` for details,,0
+	2026-06-19T12:53:44.5247830Z,,,0
+	2026-06-19T12:53:44.5470144Z,2 vulnerabilities (1 moderate&comma; 1 high),,0
+	2026-06-19T12:53:44.5750593Z,,,0
+	2026-06-19T12:53:44.6156198Z,To address all issues&comma; run:,,0
+	2026-06-19T12:53:44.6343092Z,  npm audit fix,,0
+	2026-06-19T12:53:44.6940492Z,,,0
+	2026-06-19T12:53:44.7316266Z,Run `npm audit` for details.,,0
+	2026-06-19T12:53:45.4484165Z,,,0
+	2026-06-19T12:53:45.5274347Z,> client@0.0.0 build,,0
+	2026-06-19T12:53:45.5885067Z,> tsc -b && vite build,,0
+	2026-06-19T12:53:45.6587824Z,,,0
+	2026-06-19T12:54:27.8693066Z,vite v8.0.14 building client environment for production...,,0
+	2026-06-19T12:54:28.0007447Z,[2K,,0
+	2026-06-19T12:54:30.0197396Z,transforming...✓ 225 modules transformed.,,0
+	2026-06-19T12:54:30.6027242Z,rendering chunks...,,0
+	2026-06-19T12:54:32.3356094Z,computing gzip size...,,0
+	2026-06-19T12:54:32.4674309Z,dist/registerSW.js                     0.13 kB,,0
+	2026-06-19T12:54:32.5158255Z,[33m[PLUGIN_TIMINGS] [0mYour build spent significant time in plugin `vite:css-post`. See https://rolldown.rs/options/checks#plugintimings for more details.,,1
+	2026-06-19T12:54:32.5472570Z,dist/manifest.webmanifest              0.35 kB,,0
+	2026-06-19T12:54:32.5681851Z,,,1
+	2026-06-19T12:54:32.5890632Z,dist/index.html                        0.85 kB │ gzip:   0.46 kB,,0
+	2026-06-19T12:54:32.6575454Z,[plugin builtin:vite-reporter] ,,1
+	2026-06-19T12:54:32.6774326Z,dist/assets/index-DPjNdQ5U.css         2.06 kB │ gzip:   0.88 kB,,0
+	2026-06-19T12:54:32.7371104Z,(!) Some chunks are larger than 500 kB after minification. Consider:,,1
+	2026-06-19T12:54:32.7593299Z,dist/assets/purify.es-6-uFcs4-.js     24.94 kB │ gzip:   9.78 kB,,0
+	2026-06-19T12:54:32.7873007Z,- Using dynamic import() to code-split the application,,1
+	2026-06-19T12:54:32.8291876Z,dist/assets/index.es-EmVocepA.js     151.38 kB │ gzip:  48.88 kB,,0
+	2026-06-19T12:54:32.8491721Z,- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting,,1
+	2026-06-19T12:54:32.8981621Z,dist/assets/html2canvas-DWEkO_Eq.js  199.56 kB │ gzip:  46.78 kB,,0
+	2026-06-19T12:54:32.9074780Z,- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.,,1
+	2026-06-19T12:54:32.9901746Z,dist/assets/index-DpN0u03H.js        704.86 kB │ gzip: 220.71 kB,,0
+	2026-06-19T12:54:33.0203672Z,,,0
+	2026-06-19T12:54:33.0580118Z,✓ built in 4.62s,,0
+	2026-06-19T12:54:57.0630759Z,PWA v1.3.0,,0
+	2026-06-19T12:54:57.1715354Z,mode      generateSW,,0
+	2026-06-19T12:54:57.2236595Z,precache  10 entries (1058.41 KiB),,0
+	2026-06-19T12:54:57.2842652Z,files generated,,0
+	2026-06-19T12:54:57.3536589Z,  dist/sw.js,,0
+	2026-06-19T12:54:57.5098897Z,  dist/workbox-abeb32eb.js,,0
+	2026-06-19T12:55:27.8806110Z,,,0
+	2026-06-19T12:55:28.0003386Z,Zipping existing node_modules folder...,,0
+	2026-06-19T12:56:16.5979729Z,Done in 49 sec(s).,,0
+	2026-06-19T12:56:16.6686433Z,Build script snippets done in 225 sec(s).,,0
+	2026-06-19T12:56:16.7578915Z,Preparing output...,,0
+	2026-06-19T12:56:16.8380737Z,Using standard output preparation...,,0
+	2026-06-19T12:56:16.8685196Z,,,0
+	2026-06-19T12:56:16.9187708Z,Copying files to destination directory '/home/site/wwwroot'...,,0
+	2026-06-19T13:00:09.3195541Z,Copying to destination directory done in 233 sec(s).,,0
+	2026-06-19T13:00:09.3879723Z,Total time for destination directory preparation done in 233 sec(s).,,0
+	2026-06-19T13:00:09.8649997Z,,,0
+	2026-06-19T13:00:09.9125212Z,Removing existing manifest file,,0
+	2026-06-19T13:00:09.9398013Z,Creating a manifest file...,,0
+	2026-06-19T13:00:10.0762745Z,Manifest file created.,,0
+	2026-06-19T13:00:10.1421704Z,Copying .ostype to manifest output directory.,,0
+	2026-06-19T13:00:10.2916915Z,,,0
+	2026-06-19T13:00:10.3119672Z,Total execution done in 521 sec(s).,,0
+2026-06-19T13:00:11.2209513Z,Running post deployment command(s)...,1b2bc306-899e-4101-89ff-9ca173621e67,0
+2026-06-19T13:00:11.3721884Z,,373b233d-2905-408c-8897-2ee363d18367,0
+2026-06-19T13:00:11.4897758Z,Generating summary of Oryx build,8f605f7a-60c1-4f5b-8b1b-11104815daf6,0
+2026-06-19T13:00:11.7116365Z,Parsing the build logs,010dbc32-39eb-4745-9811-78eb3bfc3722,0
+2026-06-19T13:00:11.8399963Z,Found 0 issue(s),17b1fbde-7d74-40a4-9fde-f128374914df,0
+2026-06-19T13:00:11.9916267Z,,83ff09a2-e246-4c6f-81b6-72be7f5084e3,0
+2026-06-19T13:00:12.0974083Z,Build Summary :,cfc6fb09-74cd-4b2b-8d1f-d2d18fb8c43e,0
+2026-06-19T13:00:12.2207834Z,===============,b73f7a01-3993-41e1-bdba-ba758f0f8f77,0
+2026-06-19T13:00:12.3234570Z,Errors (0),f253acac-617b-4612-9ac5-0247570830a0,0
+2026-06-19T13:00:12.4196032Z,Warnings (0),0787a49b-3326-4d83-bd1a-e7e67f5fb784,0
+2026-06-19T13:00:12.5600063Z,,0b9af39d-3418-460b-bc2c-30b78824eb2d,0
+2026-06-19T13:00:12.6876809Z,Triggering container recycle for OneDeploy by adding/updating restartTrigger.txt to the site root path,26df5435-fff7-4367-a4df-96f40b00c381,0
+2026-06-19T13:00:12.9014570Z,Deployment successful. deployer = OneDeploy deploymentPath = OneDeploy,c25e0819-1a94-4f79-ab84-5a209b656fb6,0

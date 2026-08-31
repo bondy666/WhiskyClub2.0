@@ -1,0 +1,41 @@
+<step title="BackgroundTrace" date="2026-05-31T12:56:46.550" instance="80fa37" url="/api/publish" method="POST" >
+  <step title="Creating temporary deployment - FetchDeploymentManager" date="2026-05-31T12:56:46.653" /><!-- duration: 2ms -->
+  <step title="Creating temporary deployment" date="2026-05-31T12:56:46.663" /><!-- duration: 73ms -->
+  <step title="Performing fetch based deployment" date="2026-05-31T12:56:46.751" >
+    <step title="Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/9f1fef8a-dd31-420b-9295-aef2b707b961.zip (8.31 MB) to /tmp/zipdeploy/extracted" date="2026-05-31T12:56:47.964" >
+      <step title="ChmodRecursive Process exited with total time taken in ms: 119" date="2026-05-31T12:56:49.960" /><!-- duration: 3ms -->
+    </step><!-- duration: 2005ms -->
+    <step title="Deployment timer started" date="2026-05-31T12:56:52.005" >
+      <step title="DeploymentManager.Deploy(id:75c4ee3e-9001-4c31-86c4-8a1ab60ddc8b)" date="2026-05-31T12:56:52.017" >
+        <step title="Collecting changeset information" date="2026-05-31T12:56:52.134" /><!-- duration: 167ms -->
+        <step title="Updating submodules" date="2026-05-31T12:56:52.310" /><!-- duration: 1131ms -->
+        <step title="Determining deployment builder" date="2026-05-31T12:56:53.673" >
+          <step title="Specific project was specified: server" date="2026-05-31T12:56:53.682" /><!-- duration: 18ms -->
+          <step title="Builder is OryxBuilder" date="2026-05-31T12:56:53.720" /><!-- duration: 18ms -->
+        </step><!-- duration: 76ms -->
+        <step title="PreDeployment: context.CleanOutputPath False" date="2026-05-31T12:56:53.794" >
+          <step title="PreDeployment: context.OutputPath /home/site/wwwroot" date="2026-05-31T12:56:53.906" >
+            <step title="Building" date="2026-05-31T12:56:54.018" >
+              <step title="Executing external process" date="2026-05-31T12:56:54.318" type="process" path="bash" arguments="-c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8debf1416e5bf3b -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;" >
+                <step title="Error occurred" date="2026-05-31T12:58:31.712" type="error" text="GetParentProcessLinux (1450) failed.: Could not find a part of the path &apos;/proc/1450/stat&apos;." stackTrace="   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64&amp; fileLength, UnixFileMode&amp; filePermissions, Boolean failForSymlink, Boolean&amp; wasSymlink, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.File.ReadLines(String path)
+   at Kudu.Core.Infrastructure.ProcessExtensions.GetParentProcessLinux(Process process, ITracer tracer) in /tmp/KuduLite/Kudu.Core/Infrastructure/ProcessExtensions.cs:line 155" /><!-- duration: 69ms -->
+                <step title="Cpu: node(1428,8.640s)+sh(1427,0.000s)+npm run build(1413,0.740s)+build.sh(1310,0.040s)+oryx(1291,7.660s)+tee(1292,0.000s)+bash(1290,0.000s)=total(17.050s)" date="2026-05-31T12:58:33.367" /><!-- duration: 239ms -->
+                <step title="bash: no io activity for 60s, prev-cpu=-1.000s, current-cpu=17.050s" date="2026-05-31T12:58:33.708" /><!-- duration: 101ms -->
+              </step><!-- duration: 125229ms -->
+              <step title="Using GenericDeploymentLogParser" date="2026-05-31T12:58:59.978" /><!-- duration: 11ms -->
+              <step title="Modified file to trigger a restart of the app container." date="2026-05-31T12:59:02.190" /><!-- duration: 30ms -->
+              <step title="Skip function trigger and logicapp sync because function is not enabled." date="2026-05-31T12:59:02.601" /><!-- duration: 51ms -->
+            </step><!-- duration: 130238ms -->
+          </step><!-- duration: 130387ms -->
+          <step title="Cleaning up temp files" date="2026-05-31T12:59:04.303" /><!-- duration: 925ms -->
+          <step title="Cleaning up temp files" date="2026-05-31T12:59:05.237" /><!-- duration: 509ms -->
+          <step title="Reloading status file with latest updates" date="2026-05-31T12:59:05.778" >
+            <step title="WebHooksManager.PublishEventAsync: PostDeployment" date="2026-05-31T12:59:05.809" /><!-- duration: 98ms -->
+          </step><!-- duration: 131ms -->
+          <step title="Cleaning up temporary deployment - fetch deployment was successful" date="2026-05-31T12:59:05.917" /><!-- duration: 2ms -->
+        </step><!-- duration: 132444ms -->
+      </step><!-- duration: 134240ms -->

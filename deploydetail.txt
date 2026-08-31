@@ -1,0 +1,122 @@
+[
+  {
+    "details_url": null,
+    "id": "7bf305f0-a39c-48b5-8417-5555f6150595",
+    "log_time": "2026-08-08T16:29:13.4961126Z",
+    "message": "Updating submodules.",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "f5bdc2b4-f2ae-4fa4-9f1a-2100ae9fb5c2",
+    "log_time": "2026-08-08T16:29:14.6679366Z",
+    "message": "Preparing deployment for commit id 'c8e6b1ba-1'.",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "7f1a1e66-2a67-48e8-9e03-f7ce3b1bd01a",
+    "log_time": "2026-08-08T16:29:15.0457898Z",
+    "message": "PreDeployment: context.CleanOutputPath False",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "9f4267b2-84fb-4e6d-ae80-c336334a0346",
+    "log_time": "2026-08-08T16:29:15.2213053Z",
+    "message": "PreDeployment: context.OutputPath /home/site/wwwroot",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "8b9334e3-ec59-43d1-8860-a69f13ce9aff",
+    "log_time": "2026-08-08T16:29:15.3874855Z",
+    "message": "Repository path is /tmp/zipdeploy/extracted",
+    "type": 0
+  },
+  {
+    "details_url": "https://whiskyclub-web-akc8dgc8dtfndugm.scm.ukwest-01.azurewebsites.net/api/deployments/c8e6b1ba-1b4d-44ff-823c-f28243c95af4/log/db0a9266-4d57-470c-b036-3dabe20e7ed3",
+    "id": "db0a9266-4d57-470c-b036-3dabe20e7ed3",
+    "log_time": "2026-08-08T16:29:15.5426837Z",
+    "message": "Running oryx build...",
+    "type": 2
+  },
+  {
+    "details_url": null,
+    "id": "18f4b7b7-4940-47aa-aef6-32905d0a3ba0",
+    "log_time": "2026-08-08T16:29:23.4146164Z",
+    "message": "",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "a90a0d6c-9e89-467b-9bcb-e0988125823f",
+    "log_time": "2026-08-08T16:29:23.5397614Z",
+    "message": "Generating summary of Oryx build",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "5c28efd8-3762-4fb2-a45d-1adf92beeb24",
+    "log_time": "2026-08-08T16:29:23.7406609Z",
+    "message": "Parsing the build logs",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "b7d44a8a-4478-4c2d-add6-bbbb72303e92",
+    "log_time": "2026-08-08T16:29:23.8708266Z",
+    "message": "Found 0 issue(s)",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "4a84bb3d-f191-47f4-b74c-7941e1744906",
+    "log_time": "2026-08-08T16:29:23.9881351Z",
+    "message": "",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "aa3ef380-5c93-4006-aa10-e05a56261794",
+    "log_time": "2026-08-08T16:29:24.1097423Z",
+    "message": "Build Summary :",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "0013c9c1-8454-4709-9e95-c63d847fbf69",
+    "log_time": "2026-08-08T16:29:24.2431312Z",
+    "message": "===============",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "2c68dfc1-6211-4ad5-9d2c-f855c9dc94ab",
+    "log_time": "2026-08-08T16:29:24.3640521Z",
+    "message": "Errors (0)",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "51923d04-dc11-4949-8733-5a9e67c253ff",
+    "log_time": "2026-08-08T16:29:24.481447Z",
+    "message": "Warnings (0)",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "88ea2fd1-dd61-4877-8e87-cd5725b03a09",
+    "log_time": "2026-08-08T16:29:24.6178929Z",
+    "message": "",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "4fb9850e-2e67-4a12-8d24-20284abb2dd2",
+    "log_time": "2026-08-08T16:29:25.2943587Z",
+    "message": "Deployment Failed. deployer = OneDeploy deploymentPath = OneDeploy",
+    "type": 0
+  }
+]
+

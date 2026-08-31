@@ -1,0 +1,46 @@
+2026-08-08T16:27:38  Fetching changes.
+2026-08-08T16:27:39    Starting  LocalZipHandler
+2026-08-08T16:27:40    Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/1e902a98-026a-46ac-a5fd-116c4286123f.zip (13.66 MB) to /tmp/zipdeploy/extracted
+2026-08-08T16:29:14  Updating submodules.
+2026-08-08T16:29:14  Preparing deployment for commit id 'c8e6b1ba-1'.
+2026-08-08T16:29:15  PreDeployment: context.CleanOutputPath False
+2026-08-08T16:29:15  PreDeployment: context.OutputPath /home/site/wwwroot
+2026-08-08T16:29:15  Repository path is /tmp/zipdeploy/extracted
+2026-08-08T16:29:15  Running oryx build...
+2026-08-08T16:29:15    Command: oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8def56a2fb2f855 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log
+2026-08-08T16:29:19    Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx
+2026-08-08T16:29:19    You can report issues at https://github.com/Microsoft/Oryx/issues
+2026-08-08T16:29:19    
+2026-08-08T16:29:19    Oryx Version: 0.2.20260513.1+5c94136d0d5c06204a00d688dc7aea902452e52c, Commit: 5c94136d0d5c06204a00d688dc7aea902452e52c, ReleaseTagName: 20260513.1
+2026-08-08T16:29:19    
+2026-08-08T16:29:19    Build Operation ID: e5b00dce599eec25
+2026-08-08T16:29:19    Repository Commit : c8e6b1ba-1b4d-44ff-823c-f28243c95af4
+2026-08-08T16:29:19    OS Type           : bookworm
+2026-08-08T16:29:19    Image Type        : githubactions
+2026-08-08T16:29:19    
+2026-08-08T16:29:19    Primary SDK Storage URL: https://oryx-cdn.microsoft.io
+2026-08-08T16:29:19    Error: Couldn't detect a version for the platform 'nodejs' in the repo.
+2026-08-08T16:29:19    Backup SDK Storage URL: 
+2026-08-08T16:29:19    ACR SDK Registry URL: (not set)
+2026-08-08T16:29:19    SDK provider status:
+2026-08-08T16:29:19      External ACR SDK provider: Enabled
+2026-08-08T16:29:19      External SDK provider: Enabled
+2026-08-08T16:29:19      Direct ACR SDK provider: Disabled
+2026-08-08T16:29:19      Blob SDK provider: Enabled
+2026-08-08T16:29:19    External ACR SDK provider is enabled. Only using user-specified platform: nodejs
+2026-08-08T16:29:20    Detecting platforms...
+2026-08-08T16:29:20    Could not detect any platform in the source directory.
+2026-08-08T16:29:23    Error: Couldn't detect a version for the platform 'nodejs' in the repo.
+/bin/bash -c "oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8def56a2fb2f855 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS "
+2026-08-08T16:29:23  
+2026-08-08T16:29:23  
+2026-08-08T16:29:23  Generating summary of Oryx build
+2026-08-08T16:29:23  Parsing the build logs
+2026-08-08T16:29:23  Found 0 issue(s)
+2026-08-08T16:29:23  
+2026-08-08T16:29:24  Build Summary :
+2026-08-08T16:29:24  ===============
+2026-08-08T16:29:24  Errors (0)
+2026-08-08T16:29:24  Warnings (0)
+2026-08-08T16:29:24  
+2026-08-08T16:29:25  Deployment Failed. deployer = OneDeploy deploymentPath = OneDeploy

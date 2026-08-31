@@ -1,0 +1,8 @@
+<step title="Incoming Request" date="2026-06-06T21:21:53.719" instance="80fa37" url="/api/deployments/latest?deployer=OneDeploy&amp;time=2026-06-06_21-20-23Z" method="GET" type="request" pid="835,1,56" Host="whiskyclub-web-akc8dgc8dtfndugm.scm.ukwest-01.azurewebsites.net" User-Agent="GITHUBACTIONS_DeployWebAppToAzure_a2cb07a660fff7b287d76e494c1f175f23037a00343d2432e95aa09d63cb1d87_v3.0.8" Authorization="Bea..." Content-Type="application/json; charset=utf-8" Cookie="ARRAffinity=80fa370e688dca2b88312acd83eb0059bdb22388056f36ce8b5a46f963d6eec6; ARRAffinitySameSite=80fa370e688dca2b88312acd83eb0059bdb22388056f36ce8b5a46f963d6eec6" Content-Length="0" X-ARR-LOG-ID="d7f79154-13c4-4236-a428-77f35bcf4719" CLIENT-IP="172.174.188.179:4183" X-SITE-DEPLOYMENT-ID="whiskyclub-web" WAS-DEFAULT-HOSTNAME="whiskyclub-web-akc8dgc8dtfndugm.scm.ukwest-01.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/deployments/latest?deployer=OneDeploy&amp;time=2026-06-06_21-20-23Z" X-Client-IP="172.174.188.179" X-Client-Port="4183" >
+  <step title="DeploymentService.GetResult" date="2026-06-06T21:21:53.740" >
+    <step title="DeploymentService.GetLatestDeployment" date="2026-06-06T21:21:53.751" >
+      <step title="DeploymentManager.GetResults" date="2026-06-06T21:21:53.779" /><!-- duration: 772ms -->
+    </step><!-- duration: 810ms -->
+  </step><!-- duration: 831ms -->
+  <step title="Outgoing response" date="2026-06-06T21:21:54.573" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 8ms -->
+</step><!-- duration: 882ms -->

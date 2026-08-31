@@ -1,0 +1,16 @@
+{
+  "name": "whiskyclub-2.0",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Ealing Whisky Guild — slick PWA for tasting, scoring and sharing drams.",
+  "scripts": {
+    "dev": "concurrently -n api,web -c yellow,green \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build && npm --prefix server run build",
+    "start": "npm --prefix server run start",
+    "icons": "node client/scripts/generate-icons.mjs",
+    "install:all": "npm install && npm --prefix client install && npm --prefix server install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

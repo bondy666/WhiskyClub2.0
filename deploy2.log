@@ -1,0 +1,67 @@
+az : WARNING: Note: 'az webapp deploy' does not run build automation 
+(dependency installation, compilation, etc.) by default for Linux web apps. If 
+your package is not pre-built, set the app setting 
+SCM_DO_BUILD_DURING_DEPLOYMENT=true to enable builds during deployment.
+At line:1 char:1
++ az webapp deploy -g WhiskyClub -n whiskyclub-web --src-path package.z ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: Note: ...ing deployment. 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+WARNING: Initiating deployment
+WARNING: Deploying from local path: package.zip
+WARNING: Warming up Kudu before deployment.
+WARNING: Warmed up Kudu instance successfully.
+WARNING: Polling the status of sync deployment. Start Time: 2026-08-08 
+16:40:14.879868+00:00 UTC
+WARNING: Status: Build successful. Time: 0(s)
+WARNING: Status: Starting the site... Time: 16(s)
+WARNING: Status: Starting the site... Time: 31(s)
+WARNING: Status: Starting the site... Time: 47(s)
+WARNING: Status: Starting the site... Time: 63(s)
+WARNING: Status: Starting the site... Time: 78(s)
+WARNING: Status: Starting the site... Time: 94(s)
+WARNING: Status: Starting the site... Time: 109(s)
+WARNING: Status: Starting the site... Time: 125(s)
+WARNING: Status: Starting the site... Time: 141(s)
+WARNING: Status: Starting the site... Time: 156(s)
+WARNING: Status: Starting the site... Time: 172(s)
+WARNING: Status: Starting the site... Time: 187(s)
+WARNING: Status: Starting the site... Time: 203(s)
+WARNING: Status: Starting the site... Time: 218(s)
+WARNING: Status: Starting the site... Time: 234(s)
+WARNING: Status: Starting the site... Time: 250(s)
+WARNING: Status: Starting the site... Time: 265(s)
+WARNING: Status: Starting the site... Time: 281(s)
+WARNING: Status: Starting the site... Time: 296(s)
+WARNING: Status: Starting the site... Time: 312(s)
+WARNING: Status: Starting the site... Time: 327(s)
+WARNING: Status: Starting the site... Time: 343(s)
+WARNING: Status: Starting the site... Time: 358(s)
+WARNING: Status: Starting the site... Time: 374(s)
+WARNING: Status: Starting the site... Time: 390(s)
+WARNING: Status: Starting the site... Time: 405(s)
+WARNING: Status: Starting the site... Time: 421(s)
+WARNING: Status: Starting the site... Time: 436(s)
+WARNING: Status: Starting the site... Time: 452(s)
+WARNING: Status: Starting the site... Time: 467(s)
+WARNING: Status: Starting the site... Time: 483(s)
+WARNING: Status: Starting the site... Time: 499(s)
+WARNING: Status: Starting the site... Time: 514(s)
+WARNING: Status: Starting the site... Time: 530(s)
+WARNING: Status: Starting the site... Time: 545(s)
+WARNING: Status: Starting the site... Time: 561(s)
+WARNING: Status: Starting the site... Time: 577(s)
+WARNING: Status: Starting the site... Time: 592(s)
+WARNING: Status: Starting the site... Time: 608(s)
+WARNING: Status: Site failed to start. Time: 623(s)
+ERROR: Deployment failed because the site failed to start within 10 mins.
+InprogressInstances: 0, SuccessfulInstances: 0, FailedInstances: 1
+Error: Deployment for site 'whiskyclub-web' with DeploymentId 
+'6e7b207c-32a9-4f28-b83d-4df62f8d2a87' failed because the worker proccess 
+failed to start within the allotted time.
+Please check the runtime logs for more info: https://whiskyclub-web-akc8dgc8dtf
+ndugm.scm.ukwest-01.azurewebsites.net/api/logs/docker
+
+

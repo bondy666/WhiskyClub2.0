@@ -1,0 +1,74 @@
+2026-08-07T02:15:34.8570895Z    _____                               
+2026-08-07T02:15:34.8573709Z   /  _  \ __________ _________   ____  
+2026-08-07T02:15:34.8573802Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2026-08-07T02:15:34.8573835Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2026-08-07T02:15:34.8573868Z \____|__  /_____ \____/ |__|    \___  >
+2026-08-07T02:15:34.8573928Z         \/      \/                  \/ 
+2026-08-07T02:15:34.8573995Z A P P   S E R V I C E   O N   L I N U X
+2026-08-07T02:15:34.8574027Z 
+2026-08-07T02:15:34.8574075Z Documentation    : http://aka.ms/webapp-linux
+2026-08-07T02:15:34.8574165Z NodeJS quickstart: https://aka.ms/node-qs
+2026-08-07T02:15:34.8574200Z NodeJS Version   : v22.22.2
+2026-08-07T02:15:34.8574234Z Instance Name    : lw0sdlwk000AL4
+2026-08-07T02:15:34.8574279Z Instance Id      : 3813442cbe21c5220c108b670f2bd0119da32cea98e46cf600e564dcf133ad26
+2026-08-07T02:15:34.8574334Z 
+2026-08-07T02:15:34.8574370Z Note: Any data outside '/home' is not persisted
+2026-08-07T02:15:40.7507072Z Starting OpenBSD Secure Shell server: sshd.
+2026-08-07T02:15:40.7904260Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2026-08-07T02:15:40.9917138Z Updating certificates in /etc/ssl/certs...
+2026-08-07T02:16:23.0624248Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_ECC_Root_CA_2022.pem
+2026-08-07T02:16:23.0625130Z rehash: warning: skipping duplicate certificate in azl_SSL.com_TLS_RSA_Root_CA_2022.pem
+2026-08-07T02:16:23.7371276Z rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+2026-08-07T02:16:24.0035969Z 4 added, 0 removed; done.
+2026-08-07T02:16:24.0939041Z Running hooks in /etc/ca-certificates/update.d...
+2026-08-07T02:16:24.1397526Z done.
+2026-08-07T02:16:24.2864434Z CA certificates copied and updated successfully.
+2026-08-07T02:16:24.8354819Z Starting periodic command scheduler: cron.
+2026-08-07T02:16:25.3593964Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2026-08-07T02:16:25.3594807Z Build Operation ID: 8ff4c5be67fc3b33
+2026-08-07T02:16:25.3779441Z Environment Variables for Application Insight's IPA Codeless Configuration exists..
+2026-08-07T02:16:26.4671413Z Writing output script to '/opt/startup/startup.sh'
+2026-08-07T02:16:26.6760926Z Running #!/bin/sh
+2026-08-07T02:16:26.6761479Z 
+2026-08-07T02:16:26.6761544Z # Enter the source directory to make sure the script runs where the user expects
+2026-08-07T02:16:26.6761601Z cd "/home/site/wwwroot"
+2026-08-07T02:16:26.6761629Z 
+2026-08-07T02:16:26.6761767Z export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
+2026-08-07T02:16:26.6761847Z if [ -z "$PORT" ]; then
+2026-08-07T02:16:26.6761877Z 		export PORT=8080
+2026-08-07T02:16:26.6761906Z fi
+2026-08-07T02:16:26.6761933Z 
+2026-08-07T02:16:26.6761964Z echo Found tar.gz based node_modules.
+2026-08-07T02:16:26.6762199Z extractionCommand="tar -xzf node_modules.tar.gz -C /node_modules"
+2026-08-07T02:16:26.6762283Z echo "Removing existing modules directory from root..."
+2026-08-07T02:16:26.6762347Z rm -fr /node_modules
+2026-08-07T02:16:26.6762379Z mkdir -p /node_modules
+2026-08-07T02:16:26.6762409Z echo Extracting modules...
+2026-08-07T02:16:26.6762437Z $extractionCommand
+2026-08-07T02:16:26.6762769Z export NODE_PATH="/node_modules":$NODE_PATH
+2026-08-07T02:16:26.6762981Z export PATH=/node_modules/.bin:$PATH
+2026-08-07T02:16:26.6763017Z if [ -d node_modules ]; then
+2026-08-07T02:16:26.6763078Z     mv -f node_modules _del_node_modules || true
+2026-08-07T02:16:26.6763109Z fi
+2026-08-07T02:16:26.6763138Z 
+2026-08-07T02:16:26.6763170Z if [ -d /node_modules ]; then
+2026-08-07T02:16:26.6763201Z     ln -sfn /node_modules ./node_modules 
+2026-08-07T02:16:26.6763230Z fi
+2026-08-07T02:16:26.6763257Z 
+2026-08-07T02:16:26.6763287Z echo "Done."
+2026-08-07T02:16:26.6763343Z PATH="$PATH:/home/site/wwwroot" npm start
+2026-08-07T02:16:26.6763376Z Found tar.gz based node_modules.
+2026-08-07T02:16:26.6920171Z Removing existing modules directory from root...
+2026-08-07T02:16:26.7314052Z Extracting modules...
+2026-08-07T02:16:44.8994040Z Done.
+2026-08-07T02:16:52.3096950Z npm info using npm@10.9.2
+2026-08-07T02:16:52.3162286Z npm info using node@v22.22.2
+2026-08-07T02:16:55.9943932Z 
+2026-08-07T02:16:55.9944729Z > server@1.0.0 start
+2026-08-07T02:16:55.9944782Z > node dist/index.js
+2026-08-07T02:16:55.9944814Z 
+2026-08-07T02:17:19.6260483Z Whisky Club API running on port 8080
+2026-08-07T02:17:22.9261728Z Connected to Azure SQL
+2026-08-07T02:17:24.9427625Z Synced existing club members into the admin group
+2026-08-07T02:17:25.1899150Z Ensured activity table exists
+2026-08-07T02:17:25.3733009Z Ensured tournament tables exist

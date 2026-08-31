@@ -1,0 +1,32 @@
+<step title="BackgroundTrace" date="2026-05-31T19:00:00.759" instance="80fa37" url="/api/publish" method="POST" >
+  <step title="Creating temporary deployment - FetchDeploymentManager" date="2026-05-31T19:00:00.904" /><!-- duration: 2ms -->
+  <step title="Creating temporary deployment" date="2026-05-31T19:00:00.910" /><!-- duration: 72ms -->
+  <step title="Performing fetch based deployment" date="2026-05-31T19:00:01.042" >
+    <step title="Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/f0ce8761-6ca6-45cf-8c84-87ee6c45fa60.zip (21.90 MB) to /tmp/zipdeploy/extracted" date="2026-05-31T19:00:02.737" >
+      <step title="ChmodRecursive Process exited with total time taken in ms: 309" date="2026-05-31T19:00:21.672" /><!-- duration: 3ms -->
+    </step><!-- duration: 18949ms -->
+    <step title="Deployment timer started" date="2026-05-31T19:00:23.708" >
+      <step title="DeploymentManager.Deploy(id:3966f369-2674-499d-96af-7165edd08056)" date="2026-05-31T19:00:23.719" >
+        <step title="Collecting changeset information" date="2026-05-31T19:00:23.756" /><!-- duration: 124ms -->
+        <step title="Updating submodules" date="2026-05-31T19:00:23.883" /><!-- duration: 1118ms -->
+        <step title="Determining deployment builder" date="2026-05-31T19:00:25.184" >
+          <step title="Specific project was specified: server" date="2026-05-31T19:00:25.189" /><!-- duration: 26ms -->
+          <step title="Builder is OryxBuilder" date="2026-05-31T19:00:25.256" /><!-- duration: 10ms -->
+        </step><!-- duration: 92ms -->
+        <step title="PreDeployment: context.CleanOutputPath False" date="2026-05-31T19:00:25.377" >
+          <step title="PreDeployment: context.OutputPath /home/site/wwwroot" date="2026-05-31T19:00:25.477" >
+            <step title="Building" date="2026-05-31T19:00:25.633" >
+              <step title="Executing external process" date="2026-05-31T19:00:26.431" type="process" path="bash" arguments="-c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8debf46df9632fc -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;" /><!-- duration: 127733ms -->
+              <step title="Using GenericDeploymentLogParser" date="2026-05-31T19:02:35.198" /><!-- duration: 38ms -->
+              <step title="Modified file to trigger a restart of the app container." date="2026-05-31T19:02:36.782" /><!-- duration: 2ms -->
+              <step title="Skip function trigger and logicapp sync because function is not enabled." date="2026-05-31T19:02:36.803" /><!-- duration: 11ms -->
+            </step><!-- duration: 132207ms -->
+          </step><!-- duration: 132366ms -->
+          <step title="Cleaning up temp files" date="2026-05-31T19:02:37.844" /><!-- duration: 1491ms -->
+          <step title="Cleaning up temp files" date="2026-05-31T19:02:39.338" /><!-- duration: 512ms -->
+          <step title="Reloading status file with latest updates" date="2026-05-31T19:02:39.910" >
+            <step title="WebHooksManager.PublishEventAsync: PostDeployment" date="2026-05-31T19:02:39.926" /><!-- duration: 93ms -->
+          </step><!-- duration: 110ms -->
+          <step title="Cleaning up temporary deployment - fetch deployment was successful" date="2026-05-31T19:02:40.028" /><!-- duration: 2ms -->
+        </step><!-- duration: 134683ms -->
+      </step><!-- duration: 136350ms -->
