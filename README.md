@@ -9,13 +9,31 @@ and one-tap ease of use.
 
 ## Highlights
 
-- **Guided tasting flow** — Appearance → Nose → Palate → Finish → Score, entirely with
-  single-tap pill buttons. Log a full tasting in seconds.
+- **Six-step guided tasting flow** — Bottle → Appearance → Nose → Palate → Finish → Score,
+  entirely with single-tap pill buttons. Log a full tasting in seconds.
+- **Bottle appreciation step** — rate shelf presence and bottle aesthetic before the pour,
+  so the full experience is captured from the first impression.
+- **Expanded colour & clarity palette** — 14 nuanced colour shades (Water White → Deep Treacle)
+  each with a colour swatch, and 7 clarity descriptors.
+- **Aroma emoji** — every aroma pill now carries a matching emoji for at-a-glance character.
+- **Whisky photos** — add a bottle photo when creating or editing a whisky (compressed
+  client-side to a JPEG data URL; no separate blob storage required). Falls back to a 🥃
+  tumbler emoji everywhere a photo is absent.
+- **Edit whiskies** — tap the pencil icon on any whisky detail page to update its name,
+  distillery, region, age, ABV or photo.
+- **Ad-hoc tastings** — log a personal dram outside of a club session from the dedicated
+  tab; only the owner can delete their own notes.
+- **Plan-a-Night voting** — members vote on proposed session dates directly in the app;
+  vote counts and voter lists are shown in real time.
+- **Session photo gallery** — sessions can carry multiple photos, shown as a thumbnail
+  carousel on the session detail page.
+- **Member avatars** — animated gradient avatars on the Members page, with an inline
+  add-member form.
+- **Score dial** — a circular arc component renders each member's score visually on whisky
+  and session detail pages.
 - **Warm, dark whisky-bar theme** with gold accents, Fraunces display type and a bottom
   tab bar + floating "Taste a dram" action.
 - **Dashboard** with top whisky, most active member, club stats and recent sessions.
-- **WhatsApp poll** — one tap opens WhatsApp with a pre-filled night-planning poll
-  (`wa.me` deep link, no API needed).
 - **Azure EasyAuth** sign-in with Microsoft & Google, matching the club's other apps.
 - Installable PWA with offline shell.
 
@@ -75,10 +93,12 @@ Defined in one place — `client/src/data/tastingOptions.ts`:
 
 | Section | Choices |
 | --- | --- |
-| Appearance · Colour | Pale, Golden, Amber, Copper, Mahogany |
-| Appearance · Clarity | Crystal Clear, Hazy, Cloudy |
+| Bottle · Shelf Presence | Wallflower, Understated, Handsome, Striking, Showstopper |
+| Bottle · Aesthetic (multi) | Timeless Elegance, Regal & Ornate, Sleek Minimalism, Rustic Charm, Vintage Apothecary, Bold & Modern, Whimsical Flourish, Understated Luxury |
+| Appearance · Colour | Water White, Pale Straw, White Wine, Pale Gold, Golden, Honeyed, Old Gold, Amber, Burnished Copper, Tawny, Chestnut, Russet, Mahogany, Deep Treacle |
+| Appearance · Clarity | Star-Bright, Crystal Clear, Gin-Clear, Limpid, Faintly Veiled, Hazy, Cloudy |
 | Nose · Intensity | Light, Medium, Pronounced, Powerful |
-| Nose · Aromas (multi) | Fruit, Floral, Honey, Vanilla, Smoke, Spice, Oak |
+| Nose · Aromas (multi) | Fruit 🍑, Floral 🌸, Honey 🍯, Vanilla 🍦, Smoke 💨, Spice 🌶️, Oak 🪵, Butter 🧈, Toast 🍞 |
 | Palate · Sweetness | Bone Dry, Dry, Medium, Sweet |
 | Palate · Body | Light, Medium, Full, Oily |
 | Finish · Length | Short, Medium, Long, Very Long, Endless |
