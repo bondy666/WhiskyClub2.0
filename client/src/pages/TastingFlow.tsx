@@ -85,6 +85,18 @@ export function TastingFlow() {
   const TOTAL = TASTING_STEPS.length + 2 // pick + 4 notes + score
   const selectedWhisky = whiskies?.find((w) => w.id === draft.whiskyId)
 
+  // A notes step is complete once every category has a selection, or a freestyle note is written.
+  const currentStepComplete = (() => {
+    if (step < 1 || step > TASTING_STEPS.length) return true
+    const stepDef = TASTING_STEPS[step - 1]
+    const data = draft[stepDef.key] as Record<string, unknown> & { notes?: string }
+    if (data?.notes && String(data.notes).trim()) return true
+    return stepDef.groups.every((g) => {
+      const v = data?.[g.key]
+      return g.multi ? Array.isArray(v) && v.length > 0 : v != null && v !== ''
+    })
+  })()
+
   const submit = async () => {
     setSaving(true)
     try {
@@ -189,8 +201,9 @@ export function TastingFlow() {
           <div className="mx-auto max-w-2xl">
             {step < TASTING_STEPS.length + 1 ? (
               <button
-                onClick={() => setStep((s) => s + 1)}
-                className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-br from-gold-300 to-gold-500 py-4 font-semibold text-ink-950"
+                disabled={!currentStepComplete}
+                onClick={() => currentStepComplete && setStep((s) => s + 1)}
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-br from-gold-300 to-gold-500 py-4 font-semibold text-ink-950 disabled:opacity-60"
               >
                 Continue <ArrowRight size={18} strokeWidth={2.6} />
               </button>
