@@ -164,7 +164,47 @@ export class SqlRepo implements Repo {
     const r = await this.pool.request()
       .input('adhoc', sql.NVarChar, AD_HOC_SESSION_NAME)
       .query(`SELECT * FROM dbo.TastingSessions WHERE Name <> @adhoc ORDER BY SessionDate DESC`)
-    return r.recordset.map(this.mapSession)
+    const sessions = r.recordset.map(this.mapSession)
+    await this.attachWinners(sessions)
+    return sessions
+  }
+
+  // For completed sessions, tag on the top-scoring whisky (or whiskies, if tied)
+  // so the card can show the winner as its hero image.
+  private async attachWinners(list: Session[]): Promise<void> {
+    const completed = list.filter((s) => s.status === 'completed')
+    if (!completed.length) return
+    const wr = await this.pool.request().query(`
+      WITH ScorePerWhisky AS (
+        SELECT te.TastingSessionId AS Sid, te.WhiskyId,
+               AVG(CAST(te.OverallScore AS FLOAT)) AS AvgScore
+        FROM dbo.TastingEntries te
+        WHERE te.TastingSessionId IS NOT NULL
+        GROUP BY te.TastingSessionId, te.WhiskyId
+      ),
+      Ranked AS (
+        SELECT Sid, WhiskyId,
+               RANK() OVER (PARTITION BY Sid ORDER BY AvgScore DESC) AS rnk
+        FROM ScorePerWhisky
+      )
+      SELECT r.Sid, w.Name, w.ImageUrl
+      FROM Ranked r JOIN dbo.Whiskies w ON w.Id = r.WhiskyId
+      WHERE r.rnk = 1
+      ORDER BY r.Sid, w.Name`)
+    const bySid = new Map<number, { names: string[]; images: string[] }>()
+    for (const row of wr.recordset) {
+      const sid = row.Sid as number
+      const entry = bySid.get(sid) ?? { names: [], images: [] }
+      entry.names.push(row.Name as string)
+      if (row.ImageUrl) entry.images.push(row.ImageUrl as string)
+      bySid.set(sid, entry)
+    }
+    for (const s of completed) {
+      const w = bySid.get(s.id)
+      if (!w) continue
+      s.winnerName = w.names.join(', ')
+      s.winnerImageUrls = w.images
+    }
   }
 
   async getSession(id: number) {

@@ -82,42 +82,60 @@ export function Sessions() {
         <EmptyState emoji="📅" title="No sessions yet" body="Plan the first night of the Guild." />
       ) : (
         <div className="flex flex-col gap-3">
-          {sessions.map((s, i) => (
-            <motion.div
-              key={s.id}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: Math.min(i * 0.05, 0.3) }}
-            >
-              <Card className="overflow-hidden p-0">
-                {s.photoUrl && (
-                  <img
-                    src={s.photoUrl}
-                    alt=""
-                    className="h-36 w-full cursor-pointer object-cover"
-                    onClick={() => navigate(`/sessions/${s.id}`)}
-                  />
-                )}
-                <div className="flex items-start justify-between gap-3 p-4">
-                  <div
-                    className="min-w-0 flex-1 cursor-pointer"
-                    onClick={() => navigate(`/sessions/${s.id}`)}
-                  >
-                    <div className="font-display text-lg text-cream">{s.name}</div>
-                    <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
-                      <span>{fmtDate(s.date)}</span>
-                      {s.location && (
-                        <span className="inline-flex items-center gap-1">
-                          <MapPin size={13} /> {s.location}
+          {sessions.map((s, i) => {
+            const winnerPhotos =
+              s.status === 'completed' && s.winnerImageUrls?.length ? s.winnerImageUrls : null
+            const heroPhotos = winnerPhotos ?? (s.photoUrl ? [s.photoUrl] : [])
+            return (
+              <motion.div
+                key={s.id}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: Math.min(i * 0.05, 0.3) }}
+              >
+                <Card className="overflow-hidden p-0">
+                  {heroPhotos.length > 0 && (
+                    <div
+                      className="relative cursor-pointer"
+                      onClick={() => navigate(`/sessions/${s.id}`)}
+                    >
+                      <div className={`grid ${heroPhotos.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
+                        {heroPhotos.slice(0, 4).map((url) => (
+                          <img key={url} src={url} alt="" className="h-36 w-full object-cover" />
+                        ))}
+                      </div>
+                      {winnerPhotos && (
+                        <span className="absolute left-2 top-2 inline-flex max-w-[80%] items-center gap-1 rounded-full bg-ink-950/70 px-2.5 py-1 text-xs font-semibold text-gold-300 ring-1 ring-gold-300/25">
+                          <Trophy size={12} className="shrink-0" />
+                          <span className="truncate">
+                            Winner{winnerPhotos.length > 1 ? 's' : ''}
+                            {s.winnerName ? `: ${s.winnerName}` : ''}
+                          </span>
                         </span>
                       )}
                     </div>
+                  )}
+                  <div className="flex items-start justify-between gap-3 p-4">
+                    <div
+                      className="min-w-0 flex-1 cursor-pointer"
+                      onClick={() => navigate(`/sessions/${s.id}`)}
+                    >
+                      <div className="font-display text-lg text-cream">{s.name}</div>
+                      <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
+                        <span>{fmtDate(s.date)}</span>
+                        {s.location && (
+                          <span className="inline-flex items-center gap-1">
+                            <MapPin size={13} /> {s.location}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <StatusBadge status={s.status} />
                   </div>
-                  <StatusBadge status={s.status} />
-                </div>
-              </Card>
-            </motion.div>
-          ))}
+                </Card>
+              </motion.div>
+            )
+          })}
         </div>
       )}
     </div>

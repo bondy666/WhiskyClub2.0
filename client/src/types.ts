@@ -32,6 +32,8 @@ export interface Session {
   attendeeCount?: number
   photoUrl?: string | null
   photoUrls?: string[]
+  winnerName?: string
+  winnerImageUrls?: string[]
 }
 
 export interface Tasting {

@@ -28,6 +28,33 @@ function decorateMember(m: Member): Member {
   return { ...m, tastingCount: tastings.filter((t) => t.memberId === m.id).length }
 }
 
+// Top-scoring whisky (or whiskies, if tied) for a completed session's card hero.
+function winnerFor(sessionId: number): { winnerName?: string; winnerImageUrls?: string[] } {
+  const ts = tastings.filter((t) => t.sessionId === sessionId)
+  if (!ts.length) return {}
+  const byWhisky = new Map<number, { sum: number; n: number }>()
+  for (const t of ts) {
+    const e = byWhisky.get(t.whiskyId) ?? { sum: 0, n: 0 }
+    e.sum += t.score
+    e.n += 1
+    byWhisky.set(t.whiskyId, e)
+  }
+  let best = -Infinity
+  const avgs = [...byWhisky.entries()].map(([wid, e]) => {
+    const avg = e.sum / e.n
+    if (avg > best) best = avg
+    return { wid, avg }
+  })
+  const ws = avgs
+    .filter((a) => a.avg === best)
+    .map((a) => whiskies.find((w) => w.id === a.wid))
+    .filter((w): w is Whisky => Boolean(w))
+  return {
+    winnerName: ws.map((w) => w.name).join(', '),
+    winnerImageUrls: ws.map((w) => w.imageUrl).filter((u): u is string => Boolean(u)),
+  }
+}
+
 // In-memory bringer attribution keyed by `${sessionId}:${whiskyId}`.
 const bringers = new Map<string, number>()
 
@@ -83,6 +110,7 @@ export class MemoryRepo implements Repo {
     return [...sessions]
       .filter((s) => s.name !== AD_HOC_SESSION_NAME)
       .sort((a, b) => +new Date(b.date) - +new Date(a.date))
+      .map((s) => (s.status === 'completed' ? { ...s, ...winnerFor(s.id) } : s))
   }
 
   async getSession(id: number) {
