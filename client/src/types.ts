@@ -74,6 +74,12 @@ export interface AdHocTasting extends Tasting {
   memberName: string
 }
 
+export interface SessionLineupEntry {
+  whisky: Whisky
+  broughtByMemberId: number | null
+  broughtByName: string | null
+}
+
 export interface DashboardStats {
   sessionCount: number
   whiskyCount: number

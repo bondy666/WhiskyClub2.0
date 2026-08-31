@@ -152,7 +152,7 @@ api.post('/sessions/:id/whiskies', asyncH(async (req, res) => {
   if (mid == null) return res.status(401).json({ error: 'Sign in to edit the line-up' })
   const whiskyId = Number(req.body?.whiskyId)
   if (!whiskyId) return res.status(400).json({ error: 'whiskyId is required' })
-  const updated = await repo.addSessionWhisky(Number(req.params.id), whiskyId)
+  const updated = await repo.addSessionWhisky(Number(req.params.id), whiskyId, mid)
   if (!updated) return res.status(404).json({ error: 'Session not found' })
   res.json(updated)
 }))

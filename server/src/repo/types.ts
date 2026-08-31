@@ -53,6 +53,12 @@ export interface AdHocTasting extends Tasting {
   memberName: string
 }
 
+export interface SessionLineupEntry {
+  whisky: Whisky
+  broughtByMemberId: number | null
+  broughtByName: string | null
+}
+
 // Catch-all session for tastings logged outside an organized event.
 // It is hidden from the sessions list and dashboard counts.
 export const AD_HOC_SESSION_NAME = 'Ad-hoc Tastings'
@@ -84,12 +90,12 @@ export interface Repo {
   createWhisky(input: Omit<Whisky, 'id'>): Promise<Whisky>
   updateWhisky(id: number, input: Partial<Omit<Whisky, 'id'>>): Promise<Whisky | null>
   listSessions(): Promise<Session[]>
-  getSession(id: number): Promise<{ session: Session; whiskies: Whisky[] } | null>
+  getSession(id: number): Promise<{ session: Session; whiskies: Whisky[]; lineup: SessionLineupEntry[] } | null>
   createSession(input: Omit<Session, 'id'>): Promise<Session>
   updateSessionStatus(id: number, status: SessionStatus): Promise<Session | null>
   deleteSession(id: number): Promise<boolean>
   activeSession(): Promise<Session | null>
-  addSessionWhisky(sessionId: number, whiskyId: number): Promise<{ session: Session; whiskies: Whisky[] } | null>
+  addSessionWhisky(sessionId: number, whiskyId: number, broughtByMemberId?: number | null): Promise<{ session: Session; whiskies: Whisky[]; lineup: SessionLineupEntry[] } | null>
   addSessionPhotos(id: number, photoUrls: string[]): Promise<Session | null>
   removeSessionPhoto(id: number, photoUrl: string): Promise<Session | null>
   createTasting(input: Omit<Tasting, 'id' | 'createdAt' | 'memberId'>, memberId: number): Promise<Tasting>

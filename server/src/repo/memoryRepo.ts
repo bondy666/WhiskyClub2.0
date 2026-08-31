@@ -28,6 +28,9 @@ function decorateMember(m: Member): Member {
   return { ...m, tastingCount: tastings.filter((t) => t.memberId === m.id).length }
 }
 
+// In-memory bringer attribution keyed by `${sessionId}:${whiskyId}`.
+const bringers = new Map<string, number>()
+
 export class MemoryRepo implements Repo {
   async listMembers(): Promise<Member[]> {
     return members.map(decorateMember)
@@ -91,7 +94,18 @@ export class MemoryRepo implements Repo {
       .map((wid) => whiskies.find((w) => w.id === wid))
       .filter((w): w is Whisky => Boolean(w))
       .map(decorateWhisky)
-    return { session, whiskies: ws }
+    const lineup = (session.whiskyIds ?? [])
+      .map((wid) => whiskies.find((w) => w.id === wid))
+      .filter((w): w is Whisky => Boolean(w))
+      .map((w) => {
+        const mid = bringers.get(`${id}:${w.id}`) ?? null
+        return {
+          whisky: decorateWhisky(w),
+          broughtByMemberId: mid,
+          broughtByName: mid != null ? members.find((m) => m.id === mid)?.name ?? null : null,
+        }
+      })
+    return { session, whiskies: ws, lineup }
   }
 
   async createSession(input: Omit<Session, 'id'>): Promise<Session> {
@@ -125,11 +139,12 @@ export class MemoryRepo implements Repo {
     )
   }
 
-  async addSessionWhisky(sessionId: number, whiskyId: number) {
+  async addSessionWhisky(sessionId: number, whiskyId: number, broughtByMemberId: number | null = null) {
     const s = sessions.find((x) => x.id === sessionId)
     if (!s) return null
     s.whiskyIds = s.whiskyIds ?? []
     if (!s.whiskyIds.includes(whiskyId)) s.whiskyIds.push(whiskyId)
+    if (broughtByMemberId != null) bringers.set(`${sessionId}:${whiskyId}`, broughtByMemberId)
     return this.getSession(sessionId)
   }
 

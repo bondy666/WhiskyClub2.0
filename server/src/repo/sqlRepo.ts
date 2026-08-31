@@ -185,7 +185,24 @@ export class SqlRepo implements Repo {
       ORDER BY w.Name`)
     const session = this.mapSession(sr.recordset[0])
     session.photoUrls = await this.listSessionPhotos(id)
-    return { session, whiskies: wr.recordset.map(this.mapWhisky) }
+    // Bringer board = whiskies explicitly claimed in the line-up, with who's bringing each.
+    const lr = await this.pool.request().input('id', sql.Int, id).query(`
+      SELECT w.*,
+        sw.BroughtByMemberId AS BroughtByMemberId,
+        m.Name AS BroughtByName,
+        (SELECT AVG(CAST(t2.OverallScore AS FLOAT)) FROM dbo.TastingEntries t2 WHERE t2.WhiskyId = w.Id) AS AvgScore,
+        (SELECT COUNT(*) FROM dbo.TastingEntries t2 WHERE t2.WhiskyId = w.Id) AS TastingCount
+      FROM dbo.SessionWhiskies sw
+      JOIN dbo.Whiskies w ON w.Id = sw.WhiskyId
+      LEFT JOIN dbo.ClubMembers m ON m.Id = sw.BroughtByMemberId
+      WHERE sw.TastingSessionId = @id
+      ORDER BY sw.CreatedAt, sw.Id`)
+    const lineup = lr.recordset.map((row) => ({
+      whisky: this.mapWhisky(row),
+      broughtByMemberId: (row.BroughtByMemberId as number) ?? null,
+      broughtByName: (row.BroughtByName as string) ?? null,
+    }))
+    return { session, whiskies: wr.recordset.map(this.mapWhisky), lineup }
   }
 
   private async listSessionPhotos(id: number): Promise<string[]> {
@@ -214,15 +231,19 @@ export class SqlRepo implements Repo {
     return r.recordset[0] ? this.mapSession(r.recordset[0]) : null
   }
 
-  async addSessionWhisky(sessionId: number, whiskyId: number) {
+  async addSessionWhisky(sessionId: number, whiskyId: number, broughtByMemberId: number | null = null) {
     const exists = await this.pool.request().input('id', sql.Int, sessionId)
       .query(`SELECT 1 FROM dbo.TastingSessions WHERE Id = @id`)
     if (!exists.recordset[0]) return null
     await this.pool.request()
       .input('sid', sql.Int, sessionId)
       .input('wid', sql.Int, whiskyId)
+      .input('mid', sql.Int, broughtByMemberId)
       .query(`IF NOT EXISTS (SELECT 1 FROM dbo.SessionWhiskies WHERE TastingSessionId = @sid AND WhiskyId = @wid)
-                INSERT INTO dbo.SessionWhiskies (TastingSessionId, WhiskyId) VALUES (@sid, @wid)`)
+                INSERT INTO dbo.SessionWhiskies (TastingSessionId, WhiskyId, BroughtByMemberId) VALUES (@sid, @wid, @mid)
+              ELSE IF @mid IS NOT NULL
+                UPDATE dbo.SessionWhiskies SET BroughtByMemberId = @mid
+                WHERE TastingSessionId = @sid AND WhiskyId = @wid`)
     return this.getSession(sessionId)
   }
 
