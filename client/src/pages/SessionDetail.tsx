@@ -36,6 +36,7 @@ export function SessionDetail() {
   const [freeName, setFreeName] = useState('')
   const [freeDistillery, setFreeDistillery] = useState('')
   const [claimTarget, setClaimTarget] = useState<SessionLineupEntry | null>(null)
+  const [viewPhoto, setViewPhoto] = useState<string | null>(null)
 
   useEffect(() => {
     api.get<Detail>(`/sessions/${id}`).then(setData).catch(() => setData(null))
@@ -267,7 +268,12 @@ export function SessionDetail() {
           <div className="grid grid-cols-2 gap-3">
             {photos.map((url) => (
               <div key={url} className="relative overflow-hidden rounded-2xl">
-                <img src={url} alt="Session memory" className="aspect-square w-full object-cover" />
+                <img
+                  src={url}
+                  alt="Session memory"
+                  onClick={() => setViewPhoto(url)}
+                  className="aspect-square w-full cursor-pointer object-cover"
+                />
                 {user && (
                   <button
                     disabled={busy}
@@ -425,6 +431,27 @@ export function SessionDetail() {
               </button>
             </div>
           </div>
+        </div>
+      )}
+
+      {viewPhoto && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-ink-950/90 p-4"
+          onClick={() => setViewPhoto(null)}
+        >
+          <button
+            onClick={() => setViewPhoto(null)}
+            aria-label="Close"
+            className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/10 text-cream ring-1 ring-white/15"
+          >
+            <X size={20} />
+          </button>
+          <img
+            src={viewPhoto}
+            alt="Session memory"
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-full max-w-full rounded-2xl object-contain"
+          />
         </div>
       )}
     </div>
