@@ -75,7 +75,7 @@ export const TASTING_STEPS: TastingStep[] = [
         label: 'Aromas',
         hint: 'Pick any that fit',
         multi: true,
-        options: ['Fruit', 'Floral', 'Honey', 'Vanilla', 'Smoke', 'Spice', 'Oak'],
+        options: ['Fruit', 'Floral', 'Honey', 'Vanilla', 'Smoke', 'Spice', 'Oak', 'Butter', 'Toast'],
       },
     ],
   },
@@ -121,6 +121,8 @@ export const AROMA_EMOJI: Record<string, string> = {
   Smoke: '💨',
   Spice: '🌶️',
   Oak: '🪵',
+  Butter: '🧈',
+  Toast: '🍞',
 }
 
 export const COLOUR_SWATCH: Record<string, string> = {

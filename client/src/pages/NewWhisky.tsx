@@ -16,6 +16,7 @@ export function NewWhisky() {
   const [params] = useSearchParams()
   const sessionId = params.get('session')
   const [form, setForm] = useState({ name: '', distillery: '', region: '', age: '', abv: '', imageUrl: '' })
+  const [otherRegion, setOtherRegion] = useState(false)
   const [saving, setSaving] = useState(false)
   const [loading, setLoading] = useState(editing)
   const fileRef = useRef<HTMLInputElement>(null)
@@ -37,6 +38,10 @@ export function NewWhisky() {
       .catch(() => alert('Could not load this whisky.'))
       .finally(() => setLoading(false))
   }, [editing, id])
+
+  useEffect(() => {
+    if (form.region && !REGIONS.includes(form.region)) setOtherRegion(true)
+  }, [form.region])
 
   const set = (k: string, v: string) => setForm((f) => ({ ...f, [k]: v }))
 
@@ -123,20 +128,39 @@ export function NewWhisky() {
         </Field>
         <Field label="Region">
           <div className="flex flex-wrap gap-2">
-            {REGIONS.map((r) => (
-              <button
-                key={r}
-                onClick={() => set('region', form.region === r ? '' : r)}
-                className={`rounded-full px-3.5 py-2 text-sm font-semibold ${
-                  form.region === r
-                    ? 'bg-gold-300 text-ink-950'
-                    : 'border border-white/10 bg-white/[0.03] text-cream-dim'
-                }`}
-              >
-                {r}
-              </button>
-            ))}
+            {REGIONS.map((r) => {
+              const active = r === 'Other' ? otherRegion : !otherRegion && form.region === r
+              return (
+                <button
+                  key={r}
+                  onClick={() => {
+                    if (r === 'Other') {
+                      setOtherRegion((v) => !v)
+                      set('region', '')
+                    } else {
+                      setOtherRegion(false)
+                      set('region', form.region === r ? '' : r)
+                    }
+                  }}
+                  className={`rounded-full px-3.5 py-2 text-sm font-semibold ${
+                    active
+                      ? 'bg-gold-300 text-ink-950'
+                      : 'border border-white/10 bg-white/[0.03] text-cream-dim'
+                  }`}
+                >
+                  {r}
+                </button>
+              )
+            })}
           </div>
+          {otherRegion && (
+            <input
+              value={form.region}
+              onChange={(e) => set('region', e.target.value)}
+              placeholder="Enter region"
+              className={`${inputCls} mt-2`}
+            />
+          )}
         </Field>
         <div className="grid grid-cols-2 gap-4">
           <Field label="Age (years)">
