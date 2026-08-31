@@ -174,6 +174,15 @@ api.post('/tastings', asyncH(async (req, res) => {
   res.status(201).json(created)
 }))
 
+api.put('/tastings/:id', asyncH(async (req, res) => {
+  const repo = await getRepo()
+  const mid = await optionalMemberId(repo, req)
+  if (mid == null) return res.status(403).json({ error: 'Only Guild members can edit tastings' })
+  const updated = await repo.updateTasting(Number(req.params.id), req.body, mid)
+  if (!updated) return res.status(404).json({ error: 'Tasting not found or not yours to edit' })
+  res.json(updated)
+}))
+
 api.delete('/tastings/:id', asyncH(async (req, res) => {
   const repo = await getRepo()
   const mid = await optionalMemberId(repo, req)

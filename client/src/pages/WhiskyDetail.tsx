@@ -114,6 +114,15 @@ export function WhiskyDetail() {
                   </div>
                   {myMemberId === t.memberId && (
                     <button
+                      onClick={() => navigate('/taste', { state: { tasting: t } })}
+                      aria-label="Edit tasting note"
+                      className="grid h-8 w-8 place-items-center rounded-full bg-white/5 text-muted ring-1 ring-white/10 transition hover:text-gold-300"
+                    >
+                      <Pencil size={15} />
+                    </button>
+                  )}
+                  {myMemberId === t.memberId && (
+                    <button
                       onClick={() => handleDelete(t.id)}
                       aria-label="Delete tasting note"
                       className="grid h-8 w-8 place-items-center rounded-full bg-white/5 text-muted ring-1 ring-white/10 transition hover:text-red-400"

@@ -338,6 +338,40 @@ export class SqlRepo implements Repo {
     return this.mapTasting(r.recordset[0])
   }
 
+  async updateTasting(
+    id: number,
+    input: Omit<Tasting, 'id' | 'createdAt' | 'memberId'>,
+    memberId: number,
+  ): Promise<Tasting | null> {
+    const r = await this.pool.request()
+      .input('id', sql.Int, id)
+      .input('memberId', sql.Int, memberId)
+      .input('score', sql.Decimal(4, 1), input.score)
+      .input('scoreInt', sql.Int, Math.round(input.score))
+      .input('ac', sql.NVarChar, input.appearance?.colour ?? null)
+      .input('acl', sql.NVarChar, input.appearance?.clarity ?? null)
+      .input('an', sql.NVarChar(sql.MAX), input.appearance?.notes ?? null)
+      .input('ni', sql.NVarChar, input.nose?.intensity ?? null)
+      .input('na', sql.NVarChar, (input.nose?.aromas ?? []).join(', ') || null)
+      .input('nn', sql.NVarChar(sql.MAX), input.nose?.notes ?? null)
+      .input('ps', sql.NVarChar, input.palate?.sweetness ?? null)
+      .input('pb', sql.NVarChar, input.palate?.body ?? null)
+      .input('pn', sql.NVarChar(sql.MAX), input.palate?.notes ?? null)
+      .input('fl', sql.NVarChar, input.finish?.length ?? null)
+      .input('fn', sql.NVarChar(sql.MAX), input.finish?.notes ?? null)
+      .input('on', sql.NVarChar(sql.MAX), input.overallNotes ?? null)
+      .query(`UPDATE dbo.TastingEntries SET
+        Score = @scoreInt, OverallScore = @score,
+        AppearanceColour = @ac, AppearanceClarity = @acl, AppearanceNotes = @an,
+        NoseIntensity = @ni, NoseAromas = @na, NoseNotes = @nn,
+        PalateSweetness = @ps, PalateBody = @pb, PalateNotes = @pn,
+        FinishLength = @fl, FinishNotes = @fn, OverallNotes = @on
+        OUTPUT INSERTED.*
+        WHERE Id = @id AND ClubMemberId = @memberId`)
+    if (!r.recordset[0]) return null
+    return this.mapTasting(r.recordset[0])
+  }
+
   async deleteTasting(id: number, memberId: number): Promise<boolean> {
     const r = await this.pool.request()
       .input('id', sql.Int, id)

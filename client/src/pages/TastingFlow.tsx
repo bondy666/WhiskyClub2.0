@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { useNavigate, useSearchParams } from 'react-router-dom'
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowLeft, ArrowRight, Check, GlassWater, Search, Sparkles, X } from 'lucide-react'
 import { api } from '../lib/api'
@@ -22,20 +22,35 @@ const emptyDraft = (): Draft => ({
   overallNotes: '',
 })
 
+const draftFromTasting = (t: Tasting): Draft => ({
+  whiskyId: t.whiskyId,
+  sessionId: t.sessionId ?? null,
+  score: t.score,
+  appearance: t.appearance ?? {},
+  nose: { ...t.nose, aromas: t.nose?.aromas ?? [] },
+  palate: t.palate ?? {},
+  finish: t.finish ?? {},
+  overallNotes: t.overallNotes ?? '',
+})
+
 export function TastingFlow() {
   const navigate = useNavigate()
+  const location = useLocation()
   const [params] = useSearchParams()
+  const editTasting = (location.state as { tasting?: Tasting } | null)?.tasting
+  const [editId] = useState<number | null>(editTasting?.id ?? null)
   const [whiskies, setWhiskies] = useState<Whisky[] | null>(null)
-  const [draft, setDraft] = useState<Draft>(emptyDraft())
-  const [step, setStep] = useState(0) // 0 = pick, 1..4 = notes, 5 = score
+  const [draft, setDraft] = useState<Draft>(() => (editTasting ? draftFromTasting(editTasting) : emptyDraft()))
+  const [step, setStep] = useState(editTasting ? 1 : 0) // 0 = pick, 1..4 = notes, 5 = score
   const [saving, setSaving] = useState(false)
-  const [attribution, setAttribution] = useState<string | null>(null) // session name, or null = ad-hoc
+  const [attribution, setAttribution] = useState<string | null>(editTasting?.sessionName ?? null) // session name, or null = ad-hoc
 
   useEffect(() => {
     api.get<Whisky[]>('/whiskies').then(setWhiskies).catch(() => setWhiskies([]))
   }, [])
 
   useEffect(() => {
+    if (editId) return
     const wid = Number(params.get('whisky'))
     const sid = Number(params.get('session'))
     if (wid) setDraft((d) => ({ ...d, whiskyId: wid }))
@@ -63,7 +78,7 @@ export function TastingFlow() {
         setAttribution(null)
       }
     })()
-  }, [params])
+  }, [params, editId])
 
   const TOTAL = TASTING_STEPS.length + 2 // pick + 4 notes + score
   const selectedWhisky = whiskies?.find((w) => w.id === draft.whiskyId)
@@ -71,7 +86,11 @@ export function TastingFlow() {
   const submit = async () => {
     setSaving(true)
     try {
-      await api.post<Tasting>('/tastings', draft)
+      if (editId) {
+        await api.put<Tasting>(`/tastings/${editId}`, draft)
+      } else {
+        await api.post<Tasting>('/tastings', draft)
+      }
       navigate(`/whiskies/${draft.whiskyId}`, { replace: true })
     } catch (e) {
       alert('Could not save tasting. ' + (e as Error).message)
@@ -180,7 +199,7 @@ export function TastingFlow() {
                 className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-br from-gold-300 to-gold-500 py-4 font-semibold text-ink-950 disabled:opacity-60"
               >
                 <Check size={19} strokeWidth={2.8} />
-                {saving ? 'Saving…' : 'Save tasting'}
+                {saving ? 'Saving…' : editId ? 'Save changes' : 'Save tasting'}
               </button>
             )}
           </div>

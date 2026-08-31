@@ -166,6 +166,22 @@ export class MemoryRepo implements Repo {
     return t
   }
 
+  async updateTasting(
+    id: number,
+    input: Omit<Tasting, 'id' | 'createdAt' | 'memberId'>,
+    memberId: number,
+  ): Promise<Tasting | null> {
+    const t = tastings.find((x) => x.id === id && x.memberId === memberId)
+    if (!t) return null
+    t.score = input.score
+    t.appearance = input.appearance ?? {}
+    t.nose = { ...input.nose, aromas: input.nose?.aromas ?? [] }
+    t.palate = input.palate ?? {}
+    t.finish = input.finish ?? {}
+    t.overallNotes = input.overallNotes
+    return t
+  }
+
   async deleteTasting(id: number, memberId: number): Promise<boolean> {
     const idx = tastings.findIndex((t) => t.id === id && t.memberId === memberId)
     if (idx === -1) return false

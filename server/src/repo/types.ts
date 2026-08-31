@@ -92,6 +92,7 @@ export interface Repo {
   addSessionPhotos(id: number, photoUrls: string[]): Promise<Session | null>
   removeSessionPhoto(id: number, photoUrl: string): Promise<Session | null>
   createTasting(input: Omit<Tasting, 'id' | 'createdAt' | 'memberId'>, memberId: number): Promise<Tasting>
+  updateTasting(id: number, input: Omit<Tasting, 'id' | 'createdAt' | 'memberId'>, memberId: number): Promise<Tasting | null>
   deleteTasting(id: number, memberId: number): Promise<boolean>
   listAdHocTastings(): Promise<AdHocTasting[]>
   stats(): Promise<DashboardStats>
