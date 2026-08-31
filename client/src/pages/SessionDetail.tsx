@@ -35,6 +35,7 @@ export function SessionDetail() {
   const [q, setQ] = useState('')
   const [freeName, setFreeName] = useState('')
   const [freeDistillery, setFreeDistillery] = useState('')
+  const [claimTarget, setClaimTarget] = useState<SessionLineupEntry | null>(null)
 
   useEffect(() => {
     api.get<Detail>(`/sessions/${id}`).then(setData).catch(() => setData(null))
@@ -80,6 +81,19 @@ export function SessionDetail() {
       closePicker()
     } catch (e) {
       alert('Could not add to the line-up. ' + (e as Error).message)
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  const claimBottle = async (whiskyId: number) => {
+    setBusy(true)
+    try {
+      const updated = await api.post<Detail>(`/sessions/${id}/whiskies`, { whiskyId })
+      setData(updated)
+      setClaimTarget(null)
+    } catch (e) {
+      alert('Could not claim this bottle. ' + (e as Error).message)
     } finally {
       setBusy(false)
     }
@@ -144,6 +158,11 @@ export function SessionDetail() {
   // Whiskies tasted in the session but never explicitly claimed in the line-up.
   const lineupIds = new Set(lineup.map((e) => e.whisky.id))
   const extras = whiskies.filter((w) => !lineupIds.has(w.id))
+  // Every session whisky, shown identically so all are claimable and consistent.
+  const allEntries: SessionLineupEntry[] = [
+    ...lineup,
+    ...extras.map((w) => ({ whisky: w, broughtByMemberId: null, broughtByName: null })),
+  ]
 
   return (
     <div>
@@ -291,13 +310,13 @@ export function SessionDetail() {
       <p className="mb-3 text-sm text-muted">
         Claim the bottle you’re bringing so nobody doubles up.
       </p>
-      {lineup.length === 0 && extras.length === 0 ? (
+      {allEntries.length === 0 ? (
         <p className="rounded-2xl border border-dashed border-white/10 py-10 text-center text-sm text-muted">
           No bottles claimed yet. Be the first to bring one.
         </p>
       ) : (
         <div className="flex flex-col gap-3">
-          {lineup.map((e) => (
+          {allEntries.map((e) => (
             <Card
               key={e.whisky.id}
               className="flex items-center gap-4 p-4"
@@ -318,49 +337,29 @@ export function SessionDetail() {
                     : 'Unclaimed'}
                 </div>
               </div>
-              {session.status === 'active' && (
-                <button
-                  onClick={(ev) => {
-                    ev.stopPropagation()
-                    navigate(`/taste?whisky=${e.whisky.id}&session=${session.id}`)
-                  }}
-                  className="rounded-full bg-gold-300/15 px-3 py-1.5 text-xs font-semibold text-gold-300"
-                >
-                  Taste
-                </button>
-              )}
-            </Card>
-          ))}
-          {extras.map((w) => (
-            <Card
-              key={w.id}
-              className="flex items-center gap-4 p-4"
-              onClick={() => navigate(`/whiskies/${w.id}`)}
-            >
-              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-ink-700 to-ink-900 text-xl">
-                🥃
-              </div>
-              <div className="min-w-0 flex-1">
-                <div className="truncate font-display text-[16px] text-cream">{w.name}</div>
-                <div className="truncate text-sm text-muted">
-                  {[w.distillery, w.region].filter(Boolean).join(' · ') || 'Whisky'}
-                </div>
-              </div>
-              {w.avgScore != null ? (
-                <ScoreDial value={w.avgScore} size={46} />
-              ) : (
-                session.status === 'active' && (
+              <div
+                className="flex shrink-0 items-center gap-2"
+                onClick={(ev) => ev.stopPropagation()}
+              >
+                {user && !e.broughtByName && (
                   <button
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      navigate(`/taste?whisky=${w.id}&session=${session.id}`)
-                    }}
+                    disabled={busy}
+                    onClick={() => setClaimTarget(e)}
+                    className="rounded-full bg-gold-300 px-3 py-1.5 text-xs font-semibold text-ink-950 disabled:opacity-60"
+                  >
+                    Claim
+                  </button>
+                )}
+                {session.status === 'active' && (
+                  <button
+                    onClick={() => navigate(`/taste?whisky=${e.whisky.id}&session=${session.id}`)}
                     className="rounded-full bg-gold-300/15 px-3 py-1.5 text-xs font-semibold text-gold-300"
                   >
                     Taste
                   </button>
-                )
-              )}
+                )}
+                {e.whisky.avgScore != null && <ScoreDial value={e.whisky.avgScore} size={46} />}
+              </div>
             </Card>
           ))}
         </div>
@@ -391,6 +390,42 @@ export function SessionDetail() {
           onFreestyle={bringFreestyle}
           onClose={closePicker}
         />
+      )}
+
+      {claimTarget && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-ink-950/80 p-5 backdrop-blur-sm"
+          onClick={() => !busy && setClaimTarget(null)}
+        >
+          <div
+            className="w-full max-w-sm rounded-3xl border border-white/10 bg-ink-900 p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gold-300/15 text-gold-300">
+              <Gift size={20} />
+            </div>
+            <h3 className="font-display text-xl text-cream">Claim this bottle?</h3>
+            <p className="mt-2 text-sm text-muted">
+              You’re confirming that <span className="font-semibold text-cream-dim">you’re bringing {claimTarget.whisky.name}</span> to this session. Only claim it if it’s really yours.
+            </p>
+            <div className="mt-6 flex gap-3">
+              <button
+                disabled={busy}
+                onClick={() => setClaimTarget(null)}
+                className="flex-1 rounded-full border border-white/10 bg-white/[0.03] py-3 text-sm font-semibold text-cream disabled:opacity-60"
+              >
+                Cancel
+              </button>
+              <button
+                disabled={busy}
+                onClick={() => claimBottle(claimTarget.whisky.id)}
+                className="flex-1 rounded-full bg-gradient-to-br from-gold-300 to-gold-500 py-3 text-sm font-semibold text-ink-950 disabled:opacity-60"
+              >
+                {busy ? 'Claiming…' : 'Yes, it’s mine'}
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   )
